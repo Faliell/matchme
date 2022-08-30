@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_29_164239) do
     t.string "interest"
     t.string "gender"
     t.string "geo"
-    t.string "type"
+    t.string "account_type"
     t.integer "points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
