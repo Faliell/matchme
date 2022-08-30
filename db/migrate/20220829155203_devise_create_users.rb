@@ -37,7 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string :interest
       t.string :gender
       t.string :geo
-      t.string :type
+      t.string :account_type
       t.integer :points
 
       t.timestamps null: false
