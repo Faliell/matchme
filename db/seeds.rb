@@ -14,6 +14,7 @@ User.destroy_all
 puts "Destroy database"
 
 cersei = User.create(first_name: "Cersei", last_name: "Lanister", email: "cersei@gold.com", password: "123123", age: 36, description: "I am a queen", interest:"Crowns, death avenger and brothers", gender: "female", account_type: "MatchSeeker", geo: "Westeros")
+cersei.photo.attach(io: File.open("app/assets/images/cersei.jpg"), filename: "cersei.jpg", content_type: "image/jpg")
 
 natasha = User.create(first_name: "Natasha", last_name: "Romanova", email: "natasha@viuva.com", password: "123123", age: 32, description: "I am an avenger", interest:"Heroes", gender: "female", account_type: "MatchSeeker", geo: "Moscow")
 
