@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :male_matches, class_name: 'Match', foreign_key: 'male_id'
   has_many :female_matches, class_name: 'Match', foreign_key: 'female_id'
   has_many :match_maker_matches, class_name: 'Match', foreign_key: 'match_maker_id'
+
+  has_one_attached :photo
 end
