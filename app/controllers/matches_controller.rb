@@ -16,11 +16,26 @@ class MatchesController < ApplicationController
 
 
     if @match.save
+      count_match
       redirect_to new_match_path
     else
       render :new, status: :unprocesssable_entity
     end
   end
+
+  def count_match
+    founded_matches = Match.where(male: @male, female: @female)
+    counter = founded_matches.count
+    if counter == 15
+      founded_matches.each do |match|
+
+        match.update!(status: "match")
+        result = (match.match_maker.points).to_i + 10
+        match.match_maker.update!(points: result)
+      end
+    end
+  end
+
 
   private
 
