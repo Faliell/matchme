@@ -5,11 +5,28 @@
 
 
 
-
 <%= @female.first_name %>
+<%= @female.id %>
+<%= cl_image_tag @female.photo.key, height: 400, width: 300, crop: :fill%>
 
-<%= @female.photo.key%>
 
+<%= @male.first_name %>
+<%= @male.id%>
+<%= cl_image_tag @male.photo.key, height: 400, width: 300, crop: :fill%>
 
-<%= cl_image_tag("guuiap5oio0aazu1qxpk65r551kx",
-      width: 400, height: 300, crop: :fill) %>
+<div class="container d-flex justify-content-center p-4 rounded">
+    <div class="input">
+      <%= simple_form_for [@match] do |f| %>
+        <div>
+        <%= f.input :male, selected: 1, collection: [@male.id],
+            label: false
+        %></div>
+        <div><%= f.input :female, selected: 1, collection: [@female.id], label: false %></div>
+        <div class="confirm">
+          <%= f.submit "Match", class:"btn btn-primary"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<%= button_to "Shuffle", new_match_path, class: "btn btn-primary" %>
