@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+@font-face {
+  font-family: "Amerigo Bold BT";
+  src: url('assests/Amerigo_Bold_BT');
+}
+
+@font-face {
+  font-family: "Amerigo BT";
+  src: url('assests/Amerigo_BT');
+}
+
+.btn_landing_start {
+  position: absolute;
+  left: 44.2vmax;
+  top: 18vmax;
+  border-color: #8E3E3E;
+  border-radius: 1.4vw;
+  color: #8E3E3E;
+  border-width: .22vw;
+  padding: .4vw;
+  font-size: large;
+  font-family: 'Amerigo Bold BT';
+  font-size: 1.8vw;
+}
+
+.btn_landing_log_in {
+  position: absolute;
+  right: 2vh;
+  top: 2vh;
+  border-color: #8E3E3E;
+  border-radius: 20px;
+  color: #8E3E3E;
+  border-width: 2px;
+  padding: 10px 30px 10px 30px;
+  font-family: 'Amerigo Bold BT';
+  font-size: 15px;
+}
