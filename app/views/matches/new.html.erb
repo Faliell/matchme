@@ -4,6 +4,12 @@
 
 
 
-<%= @male.first_name %>
+
 
 <%= @female.first_name %>
+
+<%= @female.photo.key%>
+
+
+<%= cl_image_tag("guuiap5oio0aazu1qxpk65r551kx",
+      width: 400, height: 300, crop: :fill) %>
