@@ -7,12 +7,12 @@
 
 <%= @female.first_name %>
 <%= @female.id %>
-<%= cl_image_tag @female.photo.key, height: 300, width: 400, crop: :fill%>
+<%= cl_image_tag @female.photo.key, height: 400, width: 300, crop: :fill%>
 
 
 <%= @male.first_name %>
 <%= @male.id%>
-<%= cl_image_tag @male.photo.key, height: 300, width: 400, crop: :fill%>
+<%= cl_image_tag @male.photo.key, height: 400, width: 300, crop: :fill%>
 
 <div class="container d-flex justify-content-center p-4 rounded">
     <div class="input">
@@ -23,11 +23,10 @@
         %></div>
         <div><%= f.input :female, selected: 1, collection: [@female.id], label: false %></div>
         <div class="confirm">
-          <%= f.submit "Book", class:"btn btn-primary"%>
+          <%= f.submit "Match", class:"btn btn-primary"%>
         </div>
       <% end %>
     </div>
   </div>
 
 <%= button_to "Shuffle", new_match_path, class: "btn btn-primary" %>
-<%= button_to "Match", new_match_path, class: "btn btn-primary" %>
