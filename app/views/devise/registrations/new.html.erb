@@ -16,7 +16,7 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "" }%>
-    <%= f.input :gender, selected: 1 , collection: ["Male", "Female"],
+    <%= f.input :gender, as: :radio_buttons, selected: 1 , collection: ["Male", "Female"],
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "" }%>
