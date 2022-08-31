@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <img src="https://s3-alpha-sig.figma.com/img/44bc/019c/339b6ed80ec5b4f02d3f651fa3faaa31?Expires=1662940800&Signature=EcaDWxddmE3nXISNvWs6fRSvqLHxcYq8SbpGkCA2FUEMGacKIUG7haCWAx-eqJEG81xw5AEn9981rrUEDfgQMJ8SjUTB2yes3jNv5YbuZflXafc9Dz1DQzQFXnTzO85~BmS9Sne4ZyUCsuUBiYa9HjOD1zXsgx8yPMjVHNFnE3OZfLy30iiU24qB8ELRrZzE6BSFyiEsz07KLsCf1jusRVEO-s-hZT7tzJJy66-TOohTwmlQtsjsqsMyOSn7LtQrWYZtaeHyzC-T0v556HY-In5asExpkw6qao0R5qrYY27RHO2GzOrDu4TQmRGs33BZoHpTQiuuPgFPOyJq7DUi8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Matchme" draggable="false" height="30">
+    <% end %>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <%# <% if user_signed_in? %> %>
+          <li class="nav-item">
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-black btn-rounded" %>
+          </li>
+          <li class="nav-item">
+          <%# <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-black btn-rounded",data: {turbo_method: :delete} %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-black btn-rounded" %>
+          </li>
+          <%# <%= else %> %>
+
+          <li class="nav-item">
+          <%= link_to "Sign in", new_user_session_path, class: "btn btn-black btn-rounded"%>
+          </li>
+          <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-black btn-rounded"%>
+          </li>
+        <%# <% end %> %>
+      </ul>
+    </div>
+  </div>
+</nav>
