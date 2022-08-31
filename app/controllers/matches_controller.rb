@@ -9,10 +9,14 @@ class MatchesController < ApplicationController
   end
 
   def create
-    @match = Match.new(match_params)
-    @match.match_maker = current_user
+
+    @male = User.find(match_params["male"].to_i)
+    @female = User.find(match_params["female"].to_i)
+    @match = Match.new(male: @male, female: @female, match_maker: current_user)
+
+
     if @match.save
-      redirect_to root_path
+      redirect_to new_match_path
     else
       render :new, status: :unprocesssable_entity
     end
@@ -21,6 +25,6 @@ class MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:matches).permit(:male, :female)
+    params.require(:match).permit(:male, :female)
   end
 end
