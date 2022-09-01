@@ -1,42 +1,58 @@
-<h1>asasasasasas</h1>
+<body class="background_select">
+  <div class="container card_matches">
+    <div class="person1">
+      <%= @female.first_name %>
+      <%= @female.last_name%>
+      <p><%= @female.geo%></p>
 
-
-
-
-
-
-Name: <%= @female.first_name %>
-<%= @female.last_name%>
-Age: <%= @female.age%>
-Description:<%= truncate(@female.description, length: 10)%>
-Interest:<%= @female.interest%>
-Geo:<%= @female.geo%>
-
-<%= cl_image_tag @female.photo.key, height: 400, width: 300, crop: :fill%> <br>
-
-
-Name:<%= @male.first_name %>
-<%= @male.last_name%>
-Age: <%= @male.age%>
-Description: <p><%= truncate(@male.description, length: 10)%></p>
-Interest: <%= @male.interest%>
-Geo: <%= @male.geo%>
-
-<%= cl_image_tag @male.photo.key, height: 400, width: 300, crop: :fill%>
-
-<div class="container d-flex justify-content-center p-4 rounded">
-    <div class="input">
-      <%= simple_form_for [@match] do |f| %>
-        <div>
-        <%= f.input :male, selected: 1, collection: [@male.id],
-            label: false, input_html: { autocomplete: "" ,  class: "d-none"}
-        %></div>
-        <div><%= f.input :female, selected: 1, collection: [@female.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"} %></div>
-        <div class="confirm">
-          <%= f.submit "Match", class:"btn btn-primary"%>
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <%= cl_image_tag @female.photo.key %>
         </div>
-      <% end %>
-    </div>
-  </div>
 
-<%= link_to "Shuffle", new_match_path, class: "btn btn-primary" %>
+        <div class="flip-card-back">
+          Age: <%= @female.age%>
+          Description:<p><%= truncate(@female.description, length: 10)%></p>
+          Interest:<%= @female.interest%>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons_match">
+      <div class="container d-flex justify-content-center p-4 rounded">
+        <div class="input">
+          <%= simple_form_for [@match] do |f| %>
+            <div>
+              <%= f.input :male, selected: 1, collection: [@male.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"}%>
+            </div>
+            <div><%= f.input :female, selected: 1, collection: [@female.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"} %></div>
+            <div class="confirm">
+              <%= f.submit "Match", class:"btn btn-primary"%>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <%= link_to "Shuffle", new_match_path, class: "btn btn-primary" %>
+    </div>
+
+    <div class="person1">
+      <%= @male.first_name %>
+      <%= @male.last_name%>
+      <p><%= @male.geo%></p>
+
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <%= cl_image_tag @male.photo.key%>
+        </div>
+
+        <div class="flip-card-back">
+          Age: <%= @male.age%>
+          Description: <p><%= truncate(@male.description, length: 10)%></p>
+          Interest: <%= @male.interest%>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
