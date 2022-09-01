@@ -17,11 +17,17 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+      <div class="SelSI mt-5">
+        <p>Don't have an account yet?</p>
+        <a href="#">Sign Up</a>
+      </div>
+
+      <div class="buttoncenter">
+        <div class="form-actions d-flex justify-content-center mt-3">
+          <%= f.button :submit, "Log in", class: "btn_log_in mt-3" %>
+        </div>
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
   </div>
 </body>
