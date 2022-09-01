@@ -6,7 +6,9 @@
       <img id="logo_select" src="https://s3-alpha-sig.figma.com/img/44bc/019c/339b6ed80ec5b4f02d3f651fa3faaa31?Expires=1662940800&Signature=EcaDWxddmE3nXISNvWs6fRSvqLHxcYq8SbpGkCA2FUEMGacKIUG7haCWAx-eqJEG81xw5AEn9981rrUEDfgQMJ8SjUTB2yes3jNv5YbuZflXafc9Dz1DQzQFXnTzO85~BmS9Sne4ZyUCsuUBiYa9HjOD1zXsgx8yPMjVHNFnE3OZfLy30iiU24qB8ELRrZzE6BSFyiEsz07KLsCf1jusRVEO-s-hZT7tzJJy66-TOohTwmlQtsjsqsMyOSn7LtQrWYZtaeHyzC-T0v556HY-In5asExpkw6qao0R5qrYY27RHO2GzOrDu4TQmRGs33BZoHpTQiuuPgFPOyJq7DUi8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Matchme" draggable="false">
     </div>
 
-    <div class="ButtonSelect btn btn_flat" href="#">
+
+    <%= link_to new_user_registration_path(query: "MatchSeeker") do %>
+         <div class="ButtonSelect btn btn_flat" href="#">
       <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039464/MatchMe/LogoMatchSeeker_rzijuc.png" />
         <div class="TextSelect">
           <p><strong>I want to be matched</strong></p>
@@ -14,24 +16,29 @@
         </div>
         <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
     </div>
+    <% end %>
 
-
-    <div class="ButtonSelect btn btn_flat" href="#">
-      <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/LogoMatchMaker_ohysmq.png" />
-        <div class="TextSelect">
-          <p><strong>I want to be a matchmaker</strong></p>
-          <p id="lower">I love helping people connect</p>
+    <%= link_to new_user_registration_path(query: "MatchMaker") do %>
+        <div class="ButtonSelect btn btn_flat" href="#">
+          <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/LogoMatchMaker_ohysmq.png" />
+            <div class="TextSelect">
+              <p><strong>I want to be a matchmaker</strong></p>
+              <p id="lower">I love helping people connect</p>
+            </div>
         </div>
-        <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
-    </div>
+            <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
+    <% end %>
 
     <div class="SelSI">
-    <p>You have already an account?</p>
+    <p>You already have an account?</p>
     <a href="#">Sign in</a>
     </div>
 
   </div>
 </body>
+
+
+
 
 
 <%# <%= link_to "MatchMaker", new_user_registration_path(query: "MatchMaker") %>
