@@ -33,6 +33,7 @@
   align-items: center;
   margin: 0;
   border-width: .2vh;
+  text-decoration: none;
 }
 
 .ButtonSelect:hover {
@@ -41,7 +42,7 @@
   margin: -0.2vh;
 }
 
-.ButtonSelect:hover + #checked{opacity: 1;}
+.ButtonSelect:hover > #checked{opacity: 1;}
 
 .TextSelect {
   padding: 0 10vw 0 3vw;
@@ -58,7 +59,7 @@
 }
 
 #LogoMatch {
-  height: 10vh;
+  width: 4vw;
 }
 
 #lower {
@@ -69,15 +70,15 @@
 #checked {
   height: 2.2vw;
   position: relative;
-  bottom: 14vh;
-  left: 38vw;
+  bottom: 3.8vh;
   opacity: 0;
 }
 
 .SelSI {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: auto;
+  margin-top: 5vh;
 }
 
 .SelSI p{
