@@ -34,12 +34,13 @@
   margin: 0;
   border-width: .2vh;
   text-decoration: none;
+  margin-bottom: 3vh;
 }
 
 .ButtonSelect:hover {
   border-color: #8E3E3E;
   border-width: .4vh;
-  margin: -0.2vh;
+  margin: -.2vh -.2vh 2.8vh -.2vh;
 }
 
 .ButtonSelect:hover > #checked{opacity: 1;}

@@ -15,7 +15,7 @@
           <div class="flip-card-back">
             <p><strong>Age:</strong> <%= @female.age%></p>
             <p><strong>Description:</strong><br><%= @female.description %></p>
-            <p><strong>Interest:</strong><br><%= @female.interest%></p>
+            <p><strong>Interests:</strong><br><%= @female.interest%></p>
           </div>
         </div>
       </div>
@@ -23,7 +23,6 @@
     </div>
 
     <div class="buttons_match">
-      <div class="Match">
         <div class="input">
           <%= simple_form_for [@match] do |f| %>
             <div>
@@ -31,13 +30,14 @@
             </div>
             <div><%= f.input :female, selected: 1, collection: [@female.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"} %></div>
             <div class="confirm">
-              <%= f.submit "Match", class:"btn btn-primary"%>
+              <%= f.submit "Match Us!", class:"Match"%>
             </div>
           <% end %>
         </div>
-      </div>
 
-      <%= link_to "Shuffle", new_match_path, class: "btn btn-primary" %>
+        <%= link_to new_match_path, class: "Shuffel d-flex justify-content-center" do %>
+          <img id="LogoShuffel" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662072033/MatchMe/shuffel_jeaek0.png" />
+        <%end%>
     </div>
 
     <div class="person1">
@@ -56,7 +56,7 @@
           <div class="flip-card-back">
             <p><strong>Age:</strong> <%= @male.age%></p>
             <p><strong>Description:</strong><br><%= @male.description %></p>
-            <p><strong>Interest:</strong><br><%= @male.interest%></p>
+            <p><strong>Interests:</strong><br><%= @male.interest%></p>
           </div>
         </div>
       </div>
