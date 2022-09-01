@@ -7,26 +7,27 @@
     </div>
 
 
-    <%= link_to new_user_registration_path(query: "MatchSeeker") do %>
-         <div class="ButtonSelect btn btn_flat" href="#">
-      <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039464/MatchMe/LogoMatchSeeker_rzijuc.png" />
+    <%= link_to new_user_registration_path(query: "MatchSeeker"), class: "linkuser" do %>
+      <div class="ButtonSelect btn btn_flat" href="#">
+        <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039464/MatchMe/LogoMatchSeeker_rzijuc.png" />
         <div class="TextSelect">
           <p><strong>I want to be matched</strong></p>
           <p id="lower">I’m looking to get matched</p>
         </div>
+      </div>
         <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
-    </div>
+    
     <% end %>
 
-    <%= link_to new_user_registration_path(query: "MatchMaker") do %>
-        <div class="ButtonSelect btn btn_flat" href="#">
-          <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/LogoMatchMaker_ohysmq.png" />
-            <div class="TextSelect">
-              <p><strong>I want to be a matchmaker</strong></p>
-              <p id="lower">I love helping people connect</p>
-            </div>
+    <%= link_to new_user_registration_path(query: "MatchMaker"), class: "linkuser" do %>
+      <div class="ButtonSelect btn btn_flat" href="#">
+        <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/LogoMatchMaker_ohysmq.png" />
+        <div class="TextSelect">
+          <p><strong>I want to be a matchmaker</strong></p>
+          <p id="lower">I love helping people connect</p>
         </div>
-            <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
+      </div>
+        <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
     <% end %>
 
     <div class="SelSI">

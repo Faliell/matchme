@@ -18,7 +18,7 @@
 
 .sign_up_to p{
   font-family: Gilroy-Light;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 
 #logo_select {
@@ -77,24 +77,32 @@
 .SelSI {
   display: flex;
   justify-content: center;
-  margin: auto;
-  margin-top: 5vh;
+  margin-top: 20px;
+
 }
 
 .SelSI p{
   font-family: Gilroy-Light;
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin: auto 0;
 }
 
 .SelSI a{
   font-family: Gilroy-ExtraBold;
-  font-size: 1.4vw;
+  font-size: 1vw;
   text-decoration: none;
   color: #8E3E3E;
-  margin-left: 1.5vw;
+  margin-left: 1vw;
 }
 
 .SelSI a:hover{
   color: #6b3131;
+}
+
+.linkuser {
+  text-decoration: none;
+}
+
+.linkuser:hover {
+  color: rgb(24, 24, 24)
 }
