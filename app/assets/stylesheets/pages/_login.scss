@@ -1,3 +1,24 @@
 .login{
   width: 25vw;
+  font-family: 'Gilroy';
+  font-size: 0.9vw;
+
+}
+
+.btn_log_in {
+  align-items: center;
+  background-color: #DD8F97;
+  border-radius: 7px;
+  color: #ffffff;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 17px;
+  width: 16vw;
+  height: 5vh;
+
+}
+
+.btn_log_in:hover {
+  background-color: #DD8F97;
+  color: #ffffff;
+  border: none
 }
