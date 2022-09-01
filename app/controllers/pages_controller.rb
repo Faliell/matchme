@@ -5,4 +5,7 @@ class PagesController < ApplicationController
 
   def select
   end
+
+  def dashboard
+  end
 end

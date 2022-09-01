@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "/select", to: "pages#select"
+  get "/dashboard", to: "pages#dashboard"
 
   resources :chatrooms, only: :show do
     resources :messages, only: :create
