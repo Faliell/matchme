@@ -1,0 +1,36 @@
+<body class="mt-1">
+  <h1>Hello MatchMaker</h1>
+
+  <h2>Recent Matches</h2>
+  <% current_user.match_maker_matches.each_with_index do |match, i| %>
+  <!--This break is to limit the latest matches to 4, change if needed-->
+  <% break if i == 4; %>
+    <% if match.status == "match" %>
+    <li>
+    <%= match.male.first_name %>
+    <%= match.male.last_name %>
+    <!--The class here makes the round avatar, change if needed-->
+    <%= cl_image_tag match.male.photo.key, class: "avatar dropdown-toggle" %>
+
+    <%= match.female.first_name %>
+    <%= match.female.last_name %>
+    <%= cl_image_tag match.female.photo.key, class: "avatar dropdown-toggle" %>
+    </li>
+    <% end %>
+  <% end %>
+
+  <div>
+  <!--To add categories of points, code below (I did 2 as an example)-->
+    <h1>Your points:</h1>
+    <%= current_user.points %>
+    <h1>Your current category:</h1>
+    <% if current_user.points <= 25 %>
+    <h3>MatchMaker wannabe</h1>
+    <% elsif current_user.points >= 25 %>
+    <h3>Champion Cupid</h1>
+    <% end %>
+  </div>
+  <div>
+  <%= link_to "Start Matching", new_match_path, class: "btn_landing_log_in btn btn_flat" %>
+  </div>
+</body>

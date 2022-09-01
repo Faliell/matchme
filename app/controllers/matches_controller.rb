@@ -36,7 +36,6 @@ class MatchesController < ApplicationController
     end
   end
 
-
   private
 
   def match_params
