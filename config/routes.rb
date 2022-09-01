@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/select", to: "pages#select"
 
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
+
   resources :matches
 end
