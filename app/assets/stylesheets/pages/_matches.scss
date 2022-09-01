@@ -72,3 +72,31 @@ font-size: .8;
   margin-top: 35%;
 }
 
+.Match{
+  align-items: center;
+  background-color: #DD8F97;
+  border-radius: 7px;
+  color: #ffffff;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 17px;
+  width: 14vw;
+  height: 14vh;
+  border: none;
+}
+
+.Match:hover {
+  background-color: #DD8F97;
+  color: #ffffff;
+  border: none
+}
+
+.buttons_match {
+  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#LogoShuffel {
+  height: 5vw;
+}
