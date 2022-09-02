@@ -1,0 +1,99 @@
+.MMdashboard {
+  margin: calc(70px + 5vh);
+  display: flex;
+}
+
+.MMLeft H1{
+  font-family: Gilroy-Light;
+}
+
+.MMLeft H3{
+  font-family: Gilroy-ExtraBold;
+  font-size: 1.4vw;
+}
+
+#yrmatches {
+  padding-left: 1vw;
+}
+
+.match_display {
+  background-color: white;
+  margin: .5vw 0 .5vw 0;
+  padding: .5vw;
+  border-radius: 1vw;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Start_match {
+  background-color: #DD8F97;
+  border-radius: 7px;
+  color: #ffffff;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 17px;
+  width: 14vw;
+  height: 14vh;
+  border: none;
+  transition: transform 0.6s;
+}
+
+.Start_match:hover {
+  background-color: #DD8F97;
+  color: #ffffff;
+  border: none;
+  transform: scale(1.2);
+  transition: transform 0.6s;
+}
+
+.matchcenter {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.MMRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: -70px;
+
+}
+
+.inforight {
+  background-color: white;
+  border-radius: 1vw;
+  font-family: Gilroy-Light;
+  margin-bottom: 5vw;
+}
+
+.MMRight H3{
+  font-family: Gilroy-ExtraBold;
+  font-size: 1.4vw;
+}
+
+.MMRight H1{
+  font-family: Gilroy-Light;
+}
+
+
+#mystats {
+  padding-left: 1vw;
+}
+
+
+.avatar1 {
+  height: 3.5vw;
+  width: 3.5vw;
+  border-radius: 50%;
+}
+
+#created_at {
+  margin: auto 0;
+}
+
+
+.checked {
+  color: yellow;
+}
