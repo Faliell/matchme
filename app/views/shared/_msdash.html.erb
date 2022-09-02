@@ -17,9 +17,15 @@
       <%= m.last_name %>
       <!--The class here makes the round avatar, change if needed-->
       <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
+       <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id) %>
+       <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
       </li>
 
     <% end %>
+    <%= current_user.first_name %>
+    <%= true_matches.first.first_name %>
+
+
   <% end %>
 
   <% if current_user.gender == "male" %>
@@ -39,6 +45,8 @@
       <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
       </li>
 
-    <% end %> 
+    <% end %>
   <% end %>
+
 </body>
+<%= console %>
