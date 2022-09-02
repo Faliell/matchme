@@ -1,3 +1,21 @@
 <body>
   <h1>Hello MatchSeeker</h1>
+  <% if current_user.gender == "female" %>
+  <% current_user.female_matches.map.uniq.each do |match, i| %>
+  <!--This break is to limit the latest matches to 4, change if needed-->
+  <% break if i == 4; %>
+    <% if match.status == "match" %>
+    <li>
+    <%= match.male.first_name %>
+    <%= match.male.last_name %>
+    <!--The class here makes the round avatar, change if needed-->
+    <%= cl_image_tag match.male.photo.key, class: "avatar dropdown-toggle" %>
+
+    <%= match.female.first_name %>
+    <%= match.female.last_name %>
+    <%= cl_image_tag match.female.photo.key, class: "avatar dropdown-toggle" %>
+    </li>
+    <% end %>
+  <% end %>
+<% end %>
 </body>
