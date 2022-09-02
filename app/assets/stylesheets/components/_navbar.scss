@@ -1,3 +1,25 @@
 .navbar {
   background-color: white;
+  height: 60px;
+}
+
+#MMLogo {
+  height: 45px;
+  position:absolute;
+  top: 10px;
+}
+
+.dropdown-menu {
+  border-radius: 1vw;
+  margin: 0;
+}
+
+
+.dropdown-item {
+  margin: 0;
+}
+
+
+.dropdown-item:hover {
+  background-color: #E5A6AD;
 }
