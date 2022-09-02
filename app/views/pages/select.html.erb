@@ -8,6 +8,7 @@
       <% end %>
     </div>
 
+    <%= link_to new_user_registration_path(query: "MatchSeeker"), class: "linkuser" do %>
     <div class="ButtonSelect btn btn_flat" href="#">
       <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039464/MatchMe/LogoMatchSeeker_rzijuc.png" />
         <div class="TextSelect">
@@ -16,8 +17,10 @@
         </div>
         <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
     </div>
+    <% end %>
 
 
+    <%= link_to new_user_registration_path(query: "MatchMaker"), class: "linkuser" do %>
     <div class="ButtonSelect btn btn_flat" href="#">
       <img id="LogoMatch" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/LogoMatchMaker_ohysmq.png" />
         <div class="TextSelect">
@@ -26,6 +29,8 @@
         </div>
         <img id="checked" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662039463/MatchMe/Group_54_hdjsap.png">
     </div>
+    <% end %>
+
 
     <div class="SelSI">
       <p>Already have an account?</p>
