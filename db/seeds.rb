@@ -18,10 +18,10 @@ file1 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661939122/de
 cersei.photo.attach(io: file1, filename: "S6c07GgH_400x400_jdubrx.jpg", content_type: "image/jg")
 cersei.save
 
-# natasha = User.create(first_name: "Natasha", last_name: "Romanova", email: "natasha@viuva.com", password: "123123", age: 32, description: "I am an avenger", interest:"Heroes", gender: "female", account_type: "MatchSeeker", geo: "Moscow")
-# file2 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940415/development/14e63434d7adeb7c87c35fb3b7f49d0d_zyfoqf.png")
-# natasha.photo.attach(io: file2, filename: "14e63434d7adeb7c87c35fb3b7f49d0d_zyfoqf.png", content_type: "image/jg")
-# natasha.save
+natasha = User.create(first_name: "Natasha", last_name: "Romanova", email: "natasha@viuva.com", password: "123123", age: 32, description: "I am an avenger", interest:"Heroes", gender: "female", account_type: "MatchSeeker", geo: "Moscow")
+file2 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940415/development/14e63434d7adeb7c87c35fb3b7f49d0d_zyfoqf.png")
+natasha.photo.attach(io: file2, filename: "14e63434d7adeb7c87c35fb3b7f49d0d_zyfoqf.png", content_type: "image/jg")
+natasha.save
 
 # robin = User.create(first_name: "Robin", last_name: "Scherbatsky", email: "robin@mother.com", password: "123123", age: 42, description: "I am a journalist", interest:"Beer", gender: "female", account_type: "MatchSeeker", geo: "New York")
 # file3 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/b3ded10c44f714d174a95668db41eeb2d99b9587_00_bghasu.jpg")
@@ -34,20 +34,20 @@ cersei.save
 # galadriel.photo.attach(io: file4, filename: "321b4464554604b56eb4750f4f9c3df1a45ceff1_00_h1wyap.jpg", content_type: "image/jg")
 # galadriel.save
 
-# lara = User.create(first_name: "Lara", last_name: "Croft", email: "lara@croft.com", password: "123123", age: 29, description: "I am an adventurer", interest:"Lost tumbs and inospit places.", gender: "female", account_type: "MatchSeeker", geo: "London")
-# file5 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/lara-croft-angelina-jolie_s3pq3z.jpg")
-# lara.photo.attach(io: file5, filename: "lara-croft-angelina-jolie_s3pq3z.jpg", content_type: "image/jg")
-# lara.save
+lara = User.create(first_name: "Lara", last_name: "Croft", email: "lara@croft.com", password: "123123", age: 29, description: "I am an adventurer and love to explore new places, when I am not in the wild you can find me in my Mansion in London", interest:"Lost tumbs and extreme experiences.", gender: "female", account_type: "MatchSeeker", geo: "London")
+file5 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/lara-croft-angelina-jolie_s3pq3z.jpg")
+lara.photo.attach(io: file5, filename: "lara-croft-angelina-jolie_s3pq3z.jpg", content_type: "image/jg")
+lara.save
 
 kratos = User.create(first_name: "Kratos", last_name: "", email: "kratos@war.com", password: "123123", age: 200, description: "I am a semi-god", interest:"Chaos and blood", gender: "male", account_type: "MatchSeeker", geo: "Greece")
 file6 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/God_of_warPS4_zrkvbd.jpg")
 kratos.photo.attach(io: file6, filename: "God_of_warPS4_zrkvbd.jpg", content_type: "image/jg")
 kratos.save
 
-# ken = User.create(first_name: "Ken", last_name: "Masters", email: "ken@fight.com", password: "123123", age: 36, description: "I am a street fighter", interest:"fights", gender: "male", account_type: "MatchSeeker", geo: "Japan")
-# file7 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/fc684796688f8d9724bfde295ea8321f64431543r1-915-1000v2_00_mqisz7.jpg")
-# ken.photo.attach(io: file7, filename: "fc684796688f8d9724bfde295ea8321f64431543r1-915-1000v2_00_mqisz7.jpg", content_type: "image/jg")
-# ken.save
+ken = User.create(first_name: "Ken", last_name: "Masters", email: "ken@fight.com", password: "123123", age: 36, description: "I am a street fighter", interest:"fights", gender: "male", account_type: "MatchSeeker", geo: "Japan")
+file7 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/fc684796688f8d9724bfde295ea8321f64431543r1-915-1000v2_00_mqisz7.jpg")
+ken.photo.attach(io: file7, filename: "fc684796688f8d9724bfde295ea8321f64431543r1-915-1000v2_00_mqisz7.jpg", content_type: "image/jg")
+ken.save
 
 # rajesh = User.create(first_name: "Rajesh", last_name: "Koothrappali", email: "raj@bbt.com", password: "123123", age: 37, description: "I am a scientist", interest:"My dog", gender: "male", account_type: "MatchSeeker", geo: "California")
 # file8 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940046/development/7cde0837350ccbfebb1e0b8e517e85c2_cfy29b.jpg")
@@ -86,5 +86,6 @@ match1 = Match.create(status: "match", male: ken, female: natasha, match_maker: 
 # match3 = Match.create(status: false, male: ken, female: natasha, match_maker: brie )
 # match4 = Match.create(status: false, male: kratos, female: lara, match_maker: brie )
 # match5 = Match.create(status: false, male: forrest, female: robin, match_maker: brie )
+match6 = Match.create(status: "match", male: kratos, female: cersei, match_maker: fiona )
 
 puts "Create Matches"

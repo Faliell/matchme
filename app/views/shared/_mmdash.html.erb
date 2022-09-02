@@ -24,7 +24,7 @@
     <h1>Your points:</h1>
     <%= current_user.points %>
     <h1>Your current category:</h1>
-    <% if current_user.points <= 25 %>
+    <% if current_user.points == nil %>
     <h3>MatchMaker wannabe</h1>
     <% elsif current_user.points >= 25 %>
     <h3>Champion Cupid</h1>
