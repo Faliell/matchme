@@ -37,25 +37,34 @@
       <% if current_user.gender == "male" %>
         <div class="col-3 col-md-4">
           <% true_matches = [] %>
-          <% current_user.male_matches.each do |match| %>
-            <% if match.status == "match" %>
-              <% true_matches.push(match.female) %>
+          <% unless current_user.male_matches.empty? %>
+            <% current_user.male_matches.each do |match| %>
+
+              <% if match.status == "match" %>
+                <% true_matches.push(match.female) %>
+              <% end %>
             <% end %>
-          <% end %>
+            <% unless true_matches.empty? %>
+              <% true_matches.uniq.each do |m| %>
+                <div class="match m-3" >
+                  <li>
+                    <p class="fullname"><%= m.first_name %> <%= m.last_name %></p>
+                    <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
+                    <p class="age"><%= m.age %></p>
+                    <!--The class here makes the round avatar, change if needed-->
+                      <div class="img-seeker" data-id="<%= m.id %>">
+                        <%= cl_image_tag m.photo.key, class: "img-fluid" %>
+                      </div>
+                  </li>
+                </div>
+                <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id) %>
 
-          <% true_matches.uniq.each do |m| %>
-
-            <li>
-            <%= m.first_name %>
-            <%= m.last_name %>
-            <!--The class here makes the round avatar, change if needed-->
-            <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
-            </li>
-
+              <% end %>
+            <% end %>
           <% end %>
         </div>
       <% end %>
- 
+
 
         <%# RIGHT SIDE  %>
 
