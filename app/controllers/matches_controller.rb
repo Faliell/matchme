@@ -26,8 +26,8 @@ class MatchesController < ApplicationController
   def count_match
     founded_matches = Match.where(male: @male, female: @female)
     counter = founded_matches.count
+    Chatroom.create(male: @male, female: @female)
     if counter == 1
-      Chatroom.create(male: @male, female: @female)
       founded_matches.each do |match|
 
         match.update!(status: "match")
