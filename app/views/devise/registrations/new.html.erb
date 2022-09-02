@@ -63,11 +63,11 @@
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :photo, as: :file %>
     </div>
-    <div class="signup btn">
-      <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
-      </div>
+
+     <div class="form-actions d-flex justify-content-center mt-3">
+          <%= f.button :submit, "Sign Up", class: "btn_log_in mt-3" %>
     </div>
+
   <% end %>
 </div>
 
