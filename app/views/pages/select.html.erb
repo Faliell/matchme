@@ -3,7 +3,9 @@
   <div class="select_buttons">
     <div class="sign_up_to">
       <p>Sign up to</p>
-      <img id="logo_select" src="https://s3-alpha-sig.figma.com/img/44bc/019c/339b6ed80ec5b4f02d3f651fa3faaa31?Expires=1662940800&Signature=EcaDWxddmE3nXISNvWs6fRSvqLHxcYq8SbpGkCA2FUEMGacKIUG7haCWAx-eqJEG81xw5AEn9981rrUEDfgQMJ8SjUTB2yes3jNv5YbuZflXafc9Dz1DQzQFXnTzO85~BmS9Sne4ZyUCsuUBiYa9HjOD1zXsgx8yPMjVHNFnE3OZfLy30iiU24qB8ELRrZzE6BSFyiEsz07KLsCf1jusRVEO-s-hZT7tzJJy66-TOohTwmlQtsjsqsMyOSn7LtQrWYZtaeHyzC-T0v556HY-In5asExpkw6qao0R5qrYY27RHO2GzOrDu4TQmRGs33BZoHpTQiuuPgFPOyJq7DUi8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Matchme" draggable="false" >
+      <%= link_to root_path, class: "navbar-brand" do %>
+        <img id="logo_select" src="https://s3-alpha-sig.figma.com/img/44bc/019c/339b6ed80ec5b4f02d3f651fa3faaa31?Expires=1662940800&Signature=EcaDWxddmE3nXISNvWs6fRSvqLHxcYq8SbpGkCA2FUEMGacKIUG7haCWAx-eqJEG81xw5AEn9981rrUEDfgQMJ8SjUTB2yes3jNv5YbuZflXafc9Dz1DQzQFXnTzO85~BmS9Sne4ZyUCsuUBiYa9HjOD1zXsgx8yPMjVHNFnE3OZfLy30iiU24qB8ELRrZzE6BSFyiEsz07KLsCf1jusRVEO-s-hZT7tzJJy66-TOohTwmlQtsjsqsMyOSn7LtQrWYZtaeHyzC-T0v556HY-In5asExpkw6qao0R5qrYY27RHO2GzOrDu4TQmRGs33BZoHpTQiuuPgFPOyJq7DUi8w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="Matchme" draggable="false" >
+      <% end %>
     </div>
 
 
@@ -35,7 +37,7 @@
 
     <div class="SelSI">
       <p>Already have an account?</p>
-      <a href="#">Sign in</a>
+      <%= link_to "Sign in", new_user_session_path %>
     </div>
 
   </div>
