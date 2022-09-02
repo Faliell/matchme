@@ -1,39 +1,64 @@
-<body class="mt-1">
-  <h1>Hello MatchMaker</h1>
+<body class="container background_matches">
+  <div class="container MMdashboard">
+    <div class="container MMLeft">
+      <div><h1 id="yrmatches">Hello <%= current_user.first_name %>!</h1></div>
+      <div class="recent_matches">
+        <h3 id="yrmatches">Your recent matches</h3>
+        <% current_user.match_maker_matches.each_with_index do |match, i| %>
+        <!--This break is to limit the latest matches to 4, change if needed-->
+        <% break if i == 4; %>
+        <div class="match_display">
+        <% if match.status == "match" %>
+          <div>
+            <%= cl_image_tag match.male.photo.key, class: "avatar1 dropdown-toggle" %>
+            <%= match.male.first_name %>
+          </div>
+          <div>
+            <%= cl_image_tag match.female.photo.key, class: "avatar1 dropdown-toggle" %>
+            <%= match.female.first_name %>
+          </div>
+          <div id="created_at">
+            <%= match.created_at.strftime("%d %b %Y") %>
+            <%= match.created_at.strftime("%H:%M") %>
+          </div>
+            <% end %>
+            </div>
+          <% end %>
+      </div>
+      <div class="matchcenter">
+        <%= link_to "Start Matching", new_match_path, class: "Start_match btn" %>
+      </div>
+    </div>
+    <div class="container MMRight">
+    <h3 id="mystats">Your stats</h3>
+      <div class="container inforight">
+        <!--To add categories of points, code below (I did 2 as an example)-->
+        <h1>Your points:</h1>
+        <h3><%= current_user.points %></h3>
+        <h1>Your current category:</h1>
+        <% if current_user.points == nil %>
+        <h3>Start matching to increase your category</h3>
+        <% elsif current_user.points <= 25 %>
+        <h3>MatchMaker wannabe</h3>
 
-  <h2>Recent Matches</h2>
-  <% current_user.match_maker_matches.each_with_index do |match, i| %>
-  <!--This break is to limit the latest matches to 4, change if needed-->
-  <% break if i == 4; %>
-    <% if match.status == "match" %>
-    <li>
-    <%= match.male.first_name %>
-    <%= match.male.last_name %>
-    <!--The class here makes the round avatar, change if needed-->
-    <%= cl_image_tag match.male.photo.key, class: "avatar dropdown-toggle" %>
+        <% elsif current_user.points >= 25 %>
+        <h3>Champion Cupid</h1>
+        <% end %>
+        <div class="container level">
+          <% if current_user.points %>
+            <% if current_user.points >= 1000 then @level_bar = 100 %>
+            <% else @level_bar = current_user.points / 10 %>
+            <%end%>
+            <div class="w3-light-grey">
+            <div class="w3-pink w3-round w3-center levelbar" style="height:24px;width:<%=@level_bar%>%"><%=@level_bar%>/1000</div>
+            </div>
+          <% end %>
+          </div>
 
-    <%= match.female.first_name %>
-    <%= match.female.last_name %>
-    <%= cl_image_tag match.female.photo.key, class: "avatar dropdown-toggle" %>
-    </li>
-    <% end %>
-  <% end %>
 
-  <div>
-  <!--To add categories of points, code below (I did 2 as an example)-->
-    <h1>Your points:</h1>
-    <%= current_user.points %>
-    <h1>Your current category:</h1>
-    <% if current_user.points == nil %>
-    <h3>Start matching to increase your category</h3>
-    <% elsif current_user.points <= 25 %>
-    <h3>MatchMaker wannabe</h3>
 
-    <% elsif current_user.points >= 25 %>
-    <h3>Champion Cupid</h1>
-    <% end %>
+      </div>
+    </div>
   </div>
-  <div>
-  <%= link_to "Start Matching", new_match_path, class: "btn_landing_log_in btn btn_flat" %>
-  </div>
+
 </body>
