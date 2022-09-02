@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <% unless current_page?(controller: '/pages', action: 'home') || current_page?(controller: '/pages', action: 'select')%>
+    <% unless current_page?(controller: '/pages', action: 'home') || current_page?(controller: '/pages', action: 'select') || current_page?(controller: 'devise/sessions', action: 'new')%>
     <%= render 'layouts/navbar' %>
     <% end %>
     <%= yield %>

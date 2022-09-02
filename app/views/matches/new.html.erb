@@ -1,42 +1,67 @@
-<h1>asasasasasas</h1>
+<body class="background_matches">
+  <div class="container card_matches">
+    <div class="person1">
+      <div class="name">
+        <%= @female.first_name %>
+        <%= @female.last_name%>
+      </div>
+      <p id="geo"><%= @female.geo%></p>
 
-
-
-
-
-
-Name: <%= @female.first_name %>
-<%= @female.last_name%>
-Age: <%= @female.age%>
-Description:<%= truncate(@female.description, length: 10)%>
-Interest:<%= @female.interest%>
-Geo:<%= @female.geo%>
-
-<%= cl_image_tag @female.photo.key, height: 400, width: 300, crop: :fill%> <br>
-
-
-Name:<%= @male.first_name %>
-<%= @male.last_name%>
-Age: <%= @male.age%>
-Description: <p><%= truncate(@male.description, length: 10)%></p>
-Interest: <%= @male.interest%>
-Geo: <%= @male.geo%>
-
-<%= cl_image_tag @male.photo.key, height: 400, width: 300, crop: :fill%>
-
-<div class="container d-flex justify-content-center p-4 rounded">
-    <div class="input">
-      <%= simple_form_for [@match] do |f| %>
-        <div>
-        <%= f.input :male, selected: 1, collection: [@male.id],
-            label: false, input_html: { autocomplete: "" ,  class: "d-none"}
-        %></div>
-        <div><%= f.input :female, selected: 1, collection: [@female.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"} %></div>
-        <div class="confirm">
-          <%= f.submit "Match", class:"btn btn-primary"%>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <%= cl_image_tag @female.photo.key, height: 400, width: 337, crop: :fill%>
+          </div>
+          <div class="flip-card-back">
+            <p><strong>Age:</strong> <%= @female.age%></p>
+            <p><strong>Description:</strong><br><%= @female.description %></p>
+            <p><strong>Interests:</strong><br><%= @female.interest%></p>
+          </div>
         </div>
-      <% end %>
-    </div>
-  </div>
+      </div>
 
-<%= link_to "Shuffle", new_match_path, class: "btn btn-primary" %>
+    </div>
+
+    <div class="buttons_match">
+        <div class="input">
+          <%= simple_form_for [@match] do |f| %>
+            <div>
+              <%= f.input :male, selected: 1, collection: [@male.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"}%>
+            </div>
+            <div><%= f.input :female, selected: 1, collection: [@female.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"} %></div>
+            <div class="confirm">
+              <%= f.submit "Match Us!", class:"Match"%>
+            </div>
+          <% end %>
+        </div>
+
+        <%= link_to new_match_path, class: "Shuffel d-flex justify-content-center" do %>
+          <img id="LogoShuffel" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662072033/MatchMe/shuffel_jeaek0.png" />
+        <%end%>
+    </div>
+
+    <div class="person1">
+      <div class="name">
+        <%= @male.first_name %>
+        <%= @male.last_name%>
+      </div>
+      <p id=""><%= @male.geo%></p>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <%= cl_image_tag @male.photo.key, height: 400, width: 337, crop: :fill%>
+          </div>
+
+          <div class="flip-card-back">
+            <p><strong>Age:</strong> <%= @male.age%></p>
+            <p><strong>Description:</strong><br><%= @male.description %></p>
+            <p><strong>Interests:</strong><br><%= @male.interest%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>

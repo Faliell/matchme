@@ -18,11 +18,11 @@
 
 .sign_up_to p{
   font-family: Gilroy-Light;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 }
 
 #logo_select {
-  width: 30vh;
+  width: 25vh;
 }
 
 
@@ -34,15 +34,16 @@
   margin: 0;
   border-width: .2vh;
   text-decoration: none;
+  margin-bottom: 3vh;
 }
 
 .ButtonSelect:hover {
   border-color: #8E3E3E;
   border-width: .4vh;
-  margin: -0.2vh;
+  margin: -.2vh -.2vh 2.8vh -.2vh;
 }
 
-.ButtonSelect:hover + #checked{opacity: 1;}
+.ButtonSelect:hover > #checked{opacity: 1;}
 
 .TextSelect {
   padding: 0 10vw 0 3vw;
@@ -59,7 +60,7 @@
 }
 
 #LogoMatch {
-  height: 10vh;
+  width: 4vw;
 }
 
 #lower {
@@ -70,32 +71,39 @@
 #checked {
   height: 2.2vw;
   position: relative;
-  bottom: 14vh;
-  left: 38vw;
+  bottom: 3.8vh;
   opacity: 0;
 }
 
 .SelSI {
   display: flex;
   justify-content: center;
-  margin: auto;
+  margin-top: 20px;
+
 }
 
 .SelSI p{
   font-family: Gilroy-Light;
-  font-size: 1.2vw;
+  font-size: 1vw;
   margin: auto 0;
 }
 
 .SelSI a{
   font-family: Gilroy-ExtraBold;
-  font-size: 1.4vw;
+  font-size: 1vw;
   text-decoration: none;
-  color: #8E3E3E;
-  margin-left: 1.5vw;
-
+  color: #DD8F97;
+  margin-left: 1vw;
 }
 
 .SelSI a:hover{
   color: #6b3131;
+}
+
+.linkuser {
+  text-decoration: none;
+}
+
+.linkuser:hover {
+  color: rgb(24, 24, 24)
 }
