@@ -1,21 +1,44 @@
 <body>
   <h1>Hello MatchSeeker</h1>
-  <% if current_user.gender == "female" %>
-  <% current_user.female_matches.map.uniq.each do |match, i| %>
-  <!--This break is to limit the latest matches to 4, change if needed-->
-  <% break if i == 4; %>
-    <% if match.status == "match" %>
-    <li>
-    <%= match.male.first_name %>
-    <%= match.male.last_name %>
-    <!--The class here makes the round avatar, change if needed-->
-    <%= cl_image_tag match.male.photo.key, class: "avatar dropdown-toggle" %>
 
-    <%= match.female.first_name %>
-    <%= match.female.last_name %>
-    <%= cl_image_tag match.female.photo.key, class: "avatar dropdown-toggle" %>
-    </li>
+  <h2>Recent Matches</h2>
+  <% if current_user.gender == "female" %>
+    <% true_matches = [] %>
+    <% current_user.female_matches.each do |match| %>
+      <% if match.status == "match" %>
+        <% true_matches.push(match.male) %>
+      <% end %>
+    <% end %>
+
+    <% true_matches.uniq.each do |m| %>
+
+      <li>
+      <%= m.first_name %>
+      <%= m.last_name %>
+      <!--The class here makes the round avatar, change if needed-->
+      <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
+      </li>
+
     <% end %>
   <% end %>
-<% end %>
+
+  <% if current_user.gender == "male" %>
+    <% true_matches = [] %>
+    <% current_user.male_matches.each do |match| %>
+      <% if match.status == "match" %>
+        <% true_matches.push(match.female) %>
+      <% end %>
+    <% end %>
+
+    <% true_matches.uniq.each do |m| %>
+
+      <li>
+      <%= m.first_name %>
+      <%= m.last_name %>
+      <!--The class here makes the round avatar, change if needed-->
+      <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
+      </li>
+
+    <% end %>
+  <% end %>
 </body>
