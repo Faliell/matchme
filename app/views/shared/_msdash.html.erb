@@ -4,28 +4,26 @@
   <h2>Recent Matches</h2>
   <% if current_user.gender == "female" %>
     <% true_matches = [] %>
-    <% current_user.female_matches.each do |match| %>
-      <% if match.status == "match" %>
-        <% true_matches.push(match.male) %>
+    <% unless current_user.female_matches.empty? %>
+      <% current_user.female_matches.each do |match| %>
+        <% if match.status == "match" %>
+          <% true_matches.push(match.male) %>
+        <% end %>
+      <% end %>
+
+      <% true_matches.uniq.each do |m| %>
+
+        <li>
+        <%= m.first_name %>
+        <%= m.last_name %>
+        <!--The class here makes the round avatar, change if needed-->
+        <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
+        <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id) %>
+        <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
+        </li>
+
       <% end %>
     <% end %>
-
-    <% true_matches.uniq.each do |m| %>
-
-      <li>
-      <%= m.first_name %>
-      <%= m.last_name %>
-      <!--The class here makes the round avatar, change if needed-->
-      <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
-       <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id) %>
-       <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
-      </li>
-
-    <% end %>
-    <%= current_user.first_name %>
-    <%= true_matches.first.first_name %>
-
-
   <% end %>
 
   <% if current_user.gender == "male" %>
@@ -49,4 +47,3 @@
   <% end %>
 
 </body>
-<%= console %>
