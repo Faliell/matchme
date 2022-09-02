@@ -1,44 +1,85 @@
-<body>
-  <h1>Hello MatchSeeker</h1>
+<body class="background">
+  <div class="leftside m-5">
+    <h2>Matches</h2>
+    <div class="row mt-5 ">
+      <% if current_user.gender == "female" %>
+        <div class="col-3 col-md-4">
+          <% true_matches = [] %>
+          <% current_user.female_matches.each do |match| %>
 
-  <h2>Recent Matches</h2>
-  <% if current_user.gender == "female" %>
-    <% true_matches = [] %>
-    <% current_user.female_matches.each do |match| %>
-      <% if match.status == "match" %>
-        <% true_matches.push(match.male) %>
+            <% if match.status == "match" %>
+              <% true_matches.push(match.male) %>
+            <% end %>
+
+          <% end %>
+
+          <% true_matches.uniq.each do |m| %>
+            <div class="match m-3" >
+              <li>
+                <p class="fullname"><%= m.first_name %> <%= m.last_name %></p>
+                <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
+                <p class="age"><%= m.age %></p>
+                <!--The class here makes the round avatar, change if needed-->
+                <div class="img-seeker" data-id="<%= m.id %>">
+                  <%= cl_image_tag m.photo.key, class: "img-fluid" %>
+                </div>
+              </li>
+            </div>
+          <% end %>
+        </div>
       <% end %>
-    <% end %>
 
-    <% true_matches.uniq.each do |m| %>
+        <% if current_user.gender == "male" %>
+          <div class="col-3 col-md-4">
+            <% true_matches = [] %>
+            <% current_user.male_matches.each do |match| %>
+              <% if match.status == "match" %>
+                <% true_matches.push(match.female) %>
+              <% end %>
+            <% end %>
 
-      <li>
-      <%= m.first_name %>
-      <%= m.last_name %>
-      <!--The class here makes the round avatar, change if needed-->
-      <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
-      </li>
+            <% true_matches.uniq.each do |m| %>
 
-    <% end %>
-  <% end %>
+              <li>
+              <%= m.first_name %>
+              <%= m.last_name %>
+              <!--The class here makes the round avatar, change if needed-->
+              <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
+              </li>
 
-  <% if current_user.gender == "male" %>
-    <% true_matches = [] %>
-    <% current_user.male_matches.each do |match| %>
-      <% if match.status == "match" %>
-        <% true_matches.push(match.female) %>
-      <% end %>
-    <% end %>
+            <% end %>
+          </div>
+        <% end %>
 
-    <% true_matches.uniq.each do |m| %>
+        <%# RIGHT SIDE  %>
 
-      <li>
-      <%= m.first_name %>
-      <%= m.last_name %>
-      <!--The class here makes the round avatar, change if needed-->
-      <%= cl_image_tag m.photo.key, class: "img-thumbnail" %>
-      </li>
+          <div class="col-9 col-md-8 bg-light">
+            <% true_matches = [] %>
+            <% current_user.female_matches.each do |match| %>
 
-    <% end %> 
-  <% end %>
+              <% if match.status == "match" %>
+                <% true_matches.push(match.male) %>
+              <% end %>
+
+            <% end %>
+
+            <% true_matches.uniq.each do |m| %>
+              <div class="match-profile m-3" >
+                <li>
+                  <div class="img-seeker" data-id="<%= m.id %>">
+                    <%= cl_image_tag m.photo.key, class: "img-fluid" %>
+                  </div>
+                  <!--The class here makes the round avatar, change if needed-->
+                </li>
+              </div>
+              <div class="description m-3">
+                <h1><%= m.first_name %> <%= m.last_name %></h1>
+                <p><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
+                <p><%= m.age %></p>
+              </div>
+            <% end %>
+          </div>
+
+    </div>
+  </div>
 </body>
