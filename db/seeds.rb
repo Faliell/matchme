@@ -81,11 +81,11 @@ brie.save
 
 puts "Create Users"
 
-match1 = Match.create(status: "match", male: kratos, female: cersei, match_maker: fiona )
+# match1 = Match.create(status: "match", male: kratos, female: cersei, match_maker: fiona )
 # match2 = Match.create(status: false, male: ken, female: natasha, match_maker: mask )
 # match3 = Match.create(status: false, male: ken, female: natasha, match_maker: brie )
 # match4 = Match.create(status: false, male: kratos, female: lara, match_maker: brie )
 # match5 = Match.create(status: false, male: forrest, female: robin, match_maker: brie )
-match6 = Match.create(status: "match", male: kratos, female: cersei, match_maker: fiona )
+# match6 = Match.create(status: "match", male: kratos, female: cersei, match_maker: fiona )
 
 puts "Create Matches"
