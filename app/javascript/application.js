@@ -5,5 +5,5 @@ import "bootstrap"
 
 //= require jquery_ujs
 
-require("app/javascript/controllers/matches.js")
-require("app/javascript/controllers/dashboard.js")
+// require("app/javascript/controllers/matches.js")
+
