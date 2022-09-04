@@ -1,105 +1,21 @@
-h1 {
-  font-family: Gilroy-ExtraBold;
-  color: rgb(16, 16, 16);
-}
-
-.title {
-  font-family: Gilroy-ExtraBold;
-}
-
-p {
-  font-family: Gilroy-Light;
-  color: rgb(14, 14, 14);
-}
-.background {
+.background_seeker {
   background: #FFF2EE;
 }
 
-.match {
-  background-color: #93756E;
-  border-radius: 1vw;
-  padding: 0.5vw;
-  font-family: Gilroy-ExtraBold;
-  margin: 0 4vw 0 4vw;
-  transform-origin: center;
-  width: 11vw;
-  cursor: pointer;
-  position: relative;
+.seekerdash {
+  margin-top: calc(70px + 3vh);
 }
 
-.match:hover {
-  background-color: #fff0ea;
-  transition: 0.1s;
-
+.selMM {
+  display: flex;
+  justify-content: center;
 }
 
-
-.match li {
-  list-style-type: none;
+.selMM p{
+  margin: auto 0;
 }
 
-.match-profile li {
-  list-style-type: none;
-}
-
-.fullname {
-  position: absolute;
-  bottom: 50px;
-  left: 15px;
-  color: whitesmoke;
-  font-size: 1.4vw;
-  text-shadow: 1px 1px 3px #1e1e1e
-}
-
-.location {
-  position: absolute;
-  bottom: 25px;
-  left: 15px;
-  color: whitesmoke;
-  font-size: 1vw;
-  text-shadow: 2px 2px 3px #1e1e1e;
-  font-family: Gilroy-Light;
-}
-
-.age {
-  position: absolute;
-  bottom: 5px;
-  left: 15px;
-  color: whitesmoke;
-  font-size: 1vw;
-  text-shadow: 1px 2px 3px #1e1e1e;
-  font-family: Gilroy-Light;
-}
-
-.match-profile {
-  background-color: #93756E;
-  border-radius: 1vw;
-  padding: 0.5vw;
-  font-family: Gilroy-ExtraBold;
-  margin: 0 4vw 0 4vw;
-  transform-origin: center;
-  width: 20vw;
-  cursor: pointer;
-  position: relative;
-}
-.img {
-  object-fit: cover;
-}
-
-.row {
-  background-color: #FFDDCE;
-  border-radius: 1vw;
-  height: 100%;
-}
-
-.leftside {
-  height: 80vh;
-}
-
-.leftside h2 {
-  margin-top: 9vh;
-}
-
-.img-seeker img {
-  border-radius: 0.6vw;
+.divide_ds {
+  display: flex;
+  justify-content: space-between;
 }

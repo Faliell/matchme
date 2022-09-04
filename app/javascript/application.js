@@ -6,3 +6,4 @@ import "bootstrap"
 //= require jquery_ujs
 
 // require("app/javascript/controllers/matches.js")
+
