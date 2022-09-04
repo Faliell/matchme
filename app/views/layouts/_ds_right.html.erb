@@ -1,0 +1,62 @@
+<div class="rightside_ds">
+
+  <% if current_user.gender == "female" %>
+    <% true_matches = [] %>
+    <% current_user.female_matches.each do |match| %>
+    <% if match.status == "match" %>
+      <% true_matches.push(match.male) %>
+    <%end%>
+  <%end%>
+  <% true_matches.uniq.each do |m| %>
+    <div class="rlds">
+      <div class="rightds_imainf">
+        <div class="img-seeker" data-id="<%= m.id %>">
+          <%= cl_image_tag m.photo.key, class: "img-right", height: 500, width: 300, crop: :fill%>
+        </div>
+        <div class="description container">
+          <h1><%= m.first_name %> <%= m.last_name %></h1>
+          <p>is from <strong><%= m.geo %></strong> and is <strong><%= m.age %></strong> years</p>
+          <p><u>Description</p></u>
+          <p><%= m.description%></p>
+          <p><u>Interest</p></u>
+          <p><%= m.interest%></p>
+        </div>
+      </div>
+      <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
+      <%end%>
+    </div>
+  <%end%>
+
+
+
+  <% if current_user.gender == "male" %>
+    <% true_matches = [] %>
+    <% current_user.male_matches.each do |match| %>
+    <% if match.status == "match" %>
+      <% true_matches.push(match.female) %>
+    <%end%>
+  <%end%>
+  <% true_matches.uniq.each do |m| %>
+    <div class="rlds">
+      <div class="rightds_imainf">
+        <div class="img-seeker" data-id="<%= m.id %>">
+          <%= cl_image_tag m.photo.key, class: "img-right", height: 500, width: 300, crop: :fill%>
+        </div>
+        <div class="description container">
+          <h1><%= m.first_name %> <%= m.last_name %></h1>
+          <p>is from <strong><%= m.geo %></strong> and is <strong><%= m.age %></strong> years</p>
+          <p><u>Description</p></u>
+          <p><%= m.description%></p>
+          <p><u>Interest</p></u>
+          <p><%= m.interest%></p>
+        </div>
+      </div>
+      <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
+      <%end%>
+    </div>
+  <%end%>
+
+
+
+
+</div>

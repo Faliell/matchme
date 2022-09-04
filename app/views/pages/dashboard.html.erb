@@ -1,6 +1,7 @@
-
+<div>
 <% if current_user.account_type == "MatchMaker" %>
   <%= render 'shared/mmdash' %>
 <% else %>
   <%= render 'shared/msdash' %>
 <% end %>
+</div>

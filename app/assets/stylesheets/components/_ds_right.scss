@@ -1,0 +1,44 @@
+.rightside_ds {
+  height: 100%;
+  width: 40vw;
+}
+
+.rlds {
+  background-color: #ffffff;
+  border-radius: .7vw;
+  overflow: hidden;
+  display: none;
+  position: sticky;
+}
+
+
+
+.rightds_imainf {
+  display: flex;
+}
+
+
+.img-right {
+  border: solid;
+  border-width: .4vw;
+  border-color: #93756E;
+  margin: .7vw 0 .7vw .7vw;
+  border-top-left-radius: 4vw;
+  border-bottom-right-radius: 4vw;
+  object-fit: cover;
+  height: 25vw;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.closebtn {
+  position: relative;
+  left: 35vw;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+<div class="leftside_ds">
+  <div class="row left">
+    <% if current_user.gender == "female" %>
+      <% true_matches = [] %>
+      <% unless current_user.female_matches.empty? %>
+        <% current_user.female_matches.each do |match| %>
+          <% if match.status == "match" %>
+            <% true_matches.push(match.male) %>
+          <% end %>
+        <% end %>
+        <% unless true_matches.empty? %>
+          <% true_matches.uniq.each do |m| %>
+            <div class="col-4">
+            <div class="match">
+              <div class="img-seeker" data-id="<%= m.id %>">
+                <%= cl_image_tag m.photo.key, class: "img-fluid", height: 500, width: 337, crop: :fill, onclick:"myFunction(this)"%>
+              </div>
+              <div class="info_dscard">
+                <p class="fullname"><%= m.first_name %> <%= m.last_name %></p>
+                <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
+                <p class="age"><%= m.age %></p>
+              </div>
+              <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id), class:"Chatlink"%>
+            </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <% if current_user.gender == "male" %>
+      <% true_matches = [] %>
+      <% unless current_user.male_matches.empty? %>
+        <% current_user.male_matches.each do |match| %>
+          <% if match.status == "match" %>
+            <% true_matches.push(match.female) %>
+          <% end %>
+        <% end %>
+        <% unless true_matches.empty? %>
+          <% true_matches.uniq.each do |m| %>
+            <div class="col-4">
+            <div class="match">
+                <div class="img-seeker" data-id="<%= m.id %>">
+                  <%= cl_image_tag m.photo.key, class: "img-fluid", height: 500, width: 337, crop: :fill, onclick:"myFunction(this)"%>
+                </div>
+                <div class="info_dscard">
+                  <p class="fullname"><%= m.first_name %> <%= m.last_name %></p>
+                  <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
+                  <p class="age"><%= m.age %></p>
+                </div>
+                <%=link_to "Chat", chatroom_path(Chatroom.where(female: m, male: current_user).first.id), class:"Chatlink" %>
+            </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

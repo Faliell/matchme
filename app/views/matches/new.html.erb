@@ -5,7 +5,7 @@
         <%= @female.first_name %>
         <%= @female.last_name%>
       </div>
-      <p id="geo"><%= @female.geo%></p>
+      <p id="geo"><i class="fa-solid fa-location-dot"></i> <%= @female.geo%></p>
 
       <div class="flip-card">
         <div class="flip-card-inner">
@@ -13,16 +13,16 @@
             <%= cl_image_tag @female.photo.key, height: 400, width: 337, crop: :fill%>
           </div>
           <div class="flip-card-back">
-            <p><strong>Age:</strong> <%= @female.age%></p>
-            <p><strong>Description:</strong><br><%= @female.description %></p>
-            <p><strong>Interests:</strong><br><%= @female.interest%></p>
+            <p>Age:<%= @female.age%></p><br>
+            <p>Description:<br><%= @female.description %></p><br>
+            <p>Interests:<br><%= @female.interest%></p>
           </div>
         </div>
       </div>
 
     </div>
 
-    <div class="buttons_match">
+    <div class="button_match">
         <div class="input">
           <%= simple_form_for [@match] do |f| %>
             <div>
@@ -45,7 +45,7 @@
         <%= @male.first_name %>
         <%= @male.last_name%>
       </div>
-      <p id=""><%= @male.geo%></p>
+      <p id="geo"><i class="fa-solid fa-location-dot"></i> <%= @male.geo%></p>
 
       <div class="flip-card">
         <div class="flip-card-inner">
@@ -54,9 +54,9 @@
           </div>
 
           <div class="flip-card-back">
-            <p><strong>Age:</strong> <%= @male.age%></p>
-            <p><strong>Description:</strong><br><%= @male.description %></p>
-            <p><strong>Interests:</strong><br><%= @male.interest%></p>
+            <p>Age: <%= @male.age%></p><br>
+            <p>Description:<br><%= @male.description %></p><br>
+            <p>Interests:<br><%= @male.interest%></p>
           </div>
         </div>
       </div>
