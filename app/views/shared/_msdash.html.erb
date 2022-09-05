@@ -1,11 +1,8 @@
 <body class="background_seeker">
-  <div class="container seekerdash">
-    <div class="selMM">
-      <p>Matches</p><p>Messages</p>
-    </div>
-    <div class="divide_ds">
+  <div class="seekerdash">
+    <div class="divide_ds" data-controller="chat">
         <div><%= render 'layouts/ds_left' %></div>
-        <div><%= render 'layouts/testJS' %></div>
+        <div class="background_right"><%= render 'layouts/ds_right' %></div>
     </div>
   </div>
 </body>

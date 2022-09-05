@@ -1,32 +1,23 @@
 .rightside_ds {
-  height: 100%;
-  width: 40vw;
+  margin: 3vw 0;
 }
+
 
 .rlds {
   background-color: #ffffff;
-  border-radius: .7vw;
+  border-radius: 1.2vw;
   overflow: hidden;
-  display: none;
   position: sticky;
-}
-
-
-
-.rightds_imainf {
-  display: flex;
+  width: 45vw;
+  margin: auto;
 }
 
 
 .img-right {
-  border: solid;
-  border-width: .4vw;
-  border-color: #93756E;
-  margin: .7vw 0 .7vw .7vw;
-  border-top-left-radius: 4vw;
-  border-bottom-right-radius: 4vw;
   object-fit: cover;
-  height: 25vw;
+  object-position: 100% 20%;
+  width: 100%;
+  height: 40vh;
 }
 
 .description {
