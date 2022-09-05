@@ -62,9 +62,11 @@
         <div class="input">
           <%= simple_form_for [@match] do |f| %>
             <div>
-              <%= f.input :male, selected: 1, collection: [@male.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"}%>
+              <%= f.hidden_field :male, value: @male.id, data: {matches_target: "maleid"} %>
             </div>
-            <div><%= f.input :female, selected: 1, collection: [@female.id], label: false, input_html: { autocomplete: "" ,  class: "d-none"} %></div>
+            <div>
+              <%= f.hidden_field :female, value: @female.id, data: {matches_target: "femaleid"} %>
+            </div>
             <div class="confirm">
               <%= f.submit "Match Us!", class:"Match matches-size"%>
             </div>
