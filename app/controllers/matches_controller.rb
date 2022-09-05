@@ -3,9 +3,22 @@ class MatchesController < ApplicationController
   def new
     @match = Match.new
     males = User.where("gender ILIKE 'male' AND account_type ILIKE 'MatchSeeker'")
+    #already_matched = current_user.match_maker_matches.wjere.map(&:male)
     @male = males.sample
     females = User.where("gender ILIKE 'female' AND account_type ILIKE 'MatchSeeker'")
     @female = females.sample
+  end
+
+  def female
+    females = User.where("gender ILIKE 'female' AND account_type ILIKE 'MatchSeeker'")
+    @female = females.sample
+    render json: { female: @female, photo: @female.photo.key }
+  end
+
+  def male
+    males = User.where("gender ILIKE 'male' AND account_type ILIKE 'MatchSeeker'")
+    @male = males.sample
+    render json: { male: @male, photo: @male.photo.key }
   end
 
   def create
