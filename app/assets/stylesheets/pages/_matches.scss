@@ -92,10 +92,18 @@ font-size: .8;
   color: #ffffff;
   font-family: Gilroy-ExtraBold;
   font-size: 17px;
-  width: 14vw;
-  height: 14vh;
   border: none;
   transition: transform 0.6s;
+}
+
+.start-match-size {
+  width: 14vw;
+  height: 8vh;
+}
+
+.matches-size {
+  width: 14vw;
+  height: 14vh;
 }
 
 .Match:hover {
