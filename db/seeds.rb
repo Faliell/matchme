@@ -53,15 +53,15 @@ lara.save
 # rajesh.photo.attach(io: file8, filename: "7cde0837350ccbfebb1e0b8e517e85c2_cfy29b.jpg.jpg", content_type: "image/jg")
 # rajesh.save
 
-# luke = User.create(first_name: "Luke", last_name: "Skywalker", email: "luke@light.com", password: "123123", age: 53, description: "I am a Jedi", interest:"Politics and family.", gender: "male", account_type: "MatchSeeker", geo: "Tattoine")
-# file9 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/z-luke-skywalker-mark-hamill_yjpnq9.jpg")
-# luke.photo.attach(io: file9, filename: "z-luke-skywalker-mark-hamill_yjpnq9.jpg", content_type: "image/jg")
-# luke.save
+luke = User.create(first_name: "Luke", last_name: "Skywalker", email: "luke@light.com", password: "123123", age: 53, description: "I am a Jedi", interest:"Politics and family.", gender: "male", account_type: "MatchSeeker", geo: "Tattoine")
+file9 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/z-luke-skywalker-mark-hamill_yjpnq9.jpg")
+luke.photo.attach(io: file9, filename: "z-luke-skywalker-mark-hamill_yjpnq9.jpg", content_type: "image/jg")
+luke.save
 
-# forrest = User.create(first_name: "Forrest", last_name: "Gump", email: "forrest@run.com", password: "123123", age: 35, description: "I am Forrest Gump", interest:"Running and benches.", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
-# file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg")
-# forrest.photo.attach(io: file10, filename: "main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg", content_type: "image/jg")
-# forrest.save
+forrest = User.create(first_name: "Forrest", last_name: "Gump", email: "forrest@run.com", password: "123123", age: 35, description: "I am Forrest Gump", interest:"Running and benches.", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
+file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg")
+forrest.photo.attach(io: file10, filename: "main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg", content_type: "image/jg")
+forrest.save
 
 luca = User.create(first_name: "Luca", last_name: "Fauzia", email: "luca@love.com", password: "123123", age: 33, description: "I'm a good musican and love people", interest:"pianos.and design", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
 file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662132178/development/107921513_z3yk4e.jpg")

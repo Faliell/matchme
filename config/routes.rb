@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get "/select", to: "pages#select"
   get "/dashboard", to: "pages#dashboard"
 
+  get "/female", to: "matches#female"
+  get "/male", to: "matches#male"
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
@@ -16,4 +19,3 @@ Rails.application.routes.draw do
   resources :matches
 
 end
-
