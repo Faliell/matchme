@@ -48,7 +48,7 @@ galadriel = User.create(first_name: "Galadriel", last_name: "Lothlorien", email:
   interest:"Magic",
   gender: "female",
   account_type: "MatchSeeker",
-  geo: "Middle-Hearth")
+  geo: "Middle-Earth")
 file4 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/321b4464554604b56eb4750f4f9c3df1a45ceff1_00_h1wyap.jpg")
 galadriel.photo.attach(io: file4, filename: "321b4464554604b56eb4750f4f9c3df1a45ceff1_00_h1wyap.jpg", content_type: "image/jg")
 galadriel.save
