@@ -1,37 +1,39 @@
 <body class="container background_matches">
-  <div class="container MMdashboard">
+  <div class="MMdashboard">
     <div class="container MMLeft">
       <div><h1 id="yrmatches">Hello <%= current_user.first_name %>!</h1></div>
-      <div class="recent_matches">
+      <div class="recent_matches mt-4">
         <h3 id="yrmatches">Your recent matches</h3>
         <% current_user.match_maker_matches.each_with_index do |match, i| %>
         <!--This break is to limit the latest matches to 4, change if needed-->
         <% break if i == 4; %>
-        <div class="match_display">
-        <% if match.status == "match" %>
-          <div>
-            <%= cl_image_tag match.male.photo.key, class: "avatar1 dropdown-toggle" %>
-            <%= match.male.first_name %>
-          </div>
-          <div>
-            <%= cl_image_tag match.female.photo.key, class: "avatar1 dropdown-toggle" %>
-            <%= match.female.first_name %>
-          </div>
-          <div id="created_at">
-            <%= match.created_at.strftime("%d %b %Y") %>
-            <%= match.created_at.strftime("%H:%M") %>
-          </div>
-            <% end %>
+        <div class="match_display mt-3">
+          <% if match.status == "match" %>
+            <div>
+              <%= cl_image_tag match.male.photo.key, class: "avatar1 dropdown-toggle" %>
+              <%= match.male.first_name %>
             </div>
-          <% end %>
+            <div>
+              <%= cl_image_tag match.female.photo.key, class: "avatar1 dropdown-toggle" %>
+              <%= match.female.first_name %>
+            </div>
+            <div id="created_at">
+              <%= match.created_at.strftime("%d %b %Y") %>
+              <%= match.created_at.strftime("%H:%M") %>
+            </div>
+            <% end %>
+        </div>
+        <% end %>
       </div>
-      <div class="matchcenter">
-        <%= link_to "Start Matching", new_match_path, class: "Start_match btn" %>
+      <div class="matchcenter ">
+        <%= link_to new_match_path, class: "Match start-match-size btn d-flex align-items-center justify-content-center" do %>
+          Start Matching
+        <% end %>
       </div>
     </div>
     <div class="container MMRight">
-    <h3 id="mystats">Your stats</h3>
-      <div class="container inforight">
+      <h3 id="mystats">Your stats</h3>
+      <div class="container inforight mt-3 pt-2">
         <!--To add categories of points, code below (I did 2 as an example)-->
         <h1>Your points:</h1>
         <h3><%= current_user.points %></h3>
@@ -50,14 +52,11 @@
             <% else @level_bar = current_user.points / 10 %>
             <%end%>
             <div class="w3-light-grey">
-            <div class="w3-brown w3-round w3-center" style="height:24px;width:<%=@level_bar%>%"><%=@level_bar%>/100</div>
+              <div class="w3-brown w3-round w3-center" style="height:24px;width:<%=@level_bar%>%"><%=@level_bar%>/100</div>
             </div>
           <% end %>
-          </div>
-
-
-
-      </div>
+        </div>
+    </div>
     </div>
   </div>
 

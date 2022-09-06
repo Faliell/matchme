@@ -10,8 +10,10 @@
 }
 
 .dropdown-menu {
-  border-radius: 1vw;
+  border-radius: 0.5vw;
   margin: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 
@@ -22,6 +24,8 @@
 
 .dropdown-item:hover {
   background-color: #E5A6AD;
+  border-radius: px;
+
 }
 
 .name_ava {

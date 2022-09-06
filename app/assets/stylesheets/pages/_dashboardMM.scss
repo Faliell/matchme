@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.MMLeft {
+  width: 55vw;
+}
+
 .MMLeft H1{
   font-family: Gilroy-Light;
 }
@@ -28,13 +32,14 @@
 }
 
 .Start_match {
+  align-items: center;
   background-color: #DD8F97;
   border-radius: 7px;
   color: #ffffff;
-  font-family: 'Gilroy-ExtraBold';
+  font-family: Gilroy-ExtraBold;
   font-size: 17px;
-  width: 14vw;
-  height: 14vh;
+  width: 12vw;
+  height: 12vh;
   border: none;
   transition: transform 0.6s;
 }
@@ -51,6 +56,7 @@
   margin-top: 5vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .MMRight {

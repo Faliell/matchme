@@ -14,7 +14,7 @@
 }
 
 .person1 {
-  background-color: #FFFFFF;
+  background-color: #fff6f3;
   border-radius: .5vw;
   padding: 1vw 1vw 4vw 1vw;
   font-family: Gilroy-Light;
@@ -92,10 +92,18 @@ font-size: .8;
   color: #ffffff;
   font-family: Gilroy-ExtraBold;
   font-size: 17px;
-  width: 14vw;
-  height: 14vh;
   border: none;
   transition: transform 0.6s;
+}
+
+.start-match-size {
+  width: 14vw;
+  height: 8vh;
+}
+
+.matches-size {
+  width: 14vw;
+  height: 14vh;
 }
 
 .Match:hover {
