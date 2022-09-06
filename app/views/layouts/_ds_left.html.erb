@@ -22,7 +22,7 @@
                   <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
                   <p class="age"><%= m.age %></p>
                 </div>
-                <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id), class:"Chatlink"%>
+                <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id), class:"Chatlink" %>
               </div>
               </div>
             <% end %>
