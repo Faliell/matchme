@@ -23,13 +23,36 @@
 .description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.closebtn {
-  position: relative;
-  left: 35vw;
-  color: black;
-  font-size: 35px;
-  cursor: pointer;
+.description h1{
+  margin-top: 1vw;
+  font-family: Amerigo_BT;
+}
+
+#geo_right {
+  font-family: Gilroy-ExtraBold;
+  font-size: 1.3vw;
+  color: #4D4D4E;
+}
+
+.gilroy_strong {
+ font-family: Gilroy-ExtraBold;
+ margin-bottom: 0;
+}
+
+
+.gilroy_light {
+  font-family: Gilroy-Light;
+}
+
+.interests {
+  font-family: Poppins;
+  background-color: #FFDDCE;
+  border-radius: 1.5vw;
+  color: #FF9282;
+  justify-items: start;
+  padding: 0 1vw;
+  margin-right: auto;
+  font-size: 1vw;
 }
