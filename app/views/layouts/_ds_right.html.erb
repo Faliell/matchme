@@ -25,6 +25,7 @@
         <p class="gilroy_strong">Interest</p>
         <p class="interests"><%= m.interest%></p>
       </div>
+      <h3 style = "font-family: Amerigo_BT">Chat with <%= m.first_name %></h3>
       <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
       <%=button_to "Block Match", block_female_match_path(m), method: :patch%>
       </div>
@@ -60,6 +61,7 @@
           <p class="gilroy_strong">Interests</p>
           <p class="interests"><%= m.interest %></p>
         </div>
+        <h1>Chat with <%= m.first_name %></h1>
         <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
         <%=button_to "Block Match", block_male_match_path(m), method: :patch%>
       </div>
