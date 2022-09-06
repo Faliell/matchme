@@ -44,7 +44,7 @@ export default class extends Controller {
   };
 
   changeFemale() {
-    fetch(`/female`)
+    fetch(`/female?current=${this.femaleidTarget.value}`)
     .then((response) => response.json())
     .then((data) => {
       this.femaleFirstNameValue = data.female.first_name
