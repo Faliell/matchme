@@ -9,6 +9,7 @@
   <%end%>
   <% true_matches.uniq.each do |m| %>
     <div class="rlds" data-id="<%= m.id %>" data-chat-target="match">
+      <button type="button" class="btn-close" aria-label="Close">
       <div class="rightds_imainf">
         <div class="img-seeker">
           <%= cl_image_tag m.photo.key, class: "img-right"%>
@@ -16,11 +17,11 @@
       </div>
       <div class="description container">
         <h1><%= m.first_name %> <%= m.last_name %></h1>
-        <p>is from <strong><%= m.geo %></strong> and is <strong><%= m.age %></strong> years</p>
-        <p><u>Description</p></u>
-        <p><%= m.description%></p>
-        <p><u>Interest</p></u>
-        <p><%= m.interest%></p>
+        <p id="geo_right"><i class="fa-solid fa-location-dot geo_right"></i><%= m.geo %></p>
+        <p class="gilroy_strong">About me</p>
+        <p class="gilroy_light"><%= m.description%></p>
+        <p class="gilroy_strong">Interest</p>
+        <p class="interests"><%= m.interest%></p>
       </div>
       <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
       </div>
@@ -39,6 +40,7 @@
     <%end%>
     <% true_matches.uniq.each do |m| %>
       <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
+      <div><button type="button" class="btn-close" aria-label="Close"></div>
         <div class="rightds_imainf">
           <div class="img-seeker">
             <%= cl_image_tag m.photo.key, class: "img-right"%>
@@ -46,11 +48,11 @@
         </div>
         <div class="description container">
           <h1><%= m.first_name %> <%= m.last_name %></h1>
-          <p>is from <strong><%= m.geo %></strong> and is <strong><%= m.age %></strong> years</p>
-          <p><u>Description</p></u>
-          <p><%= m.description%></p>
-          <p><u>Interest</p></u>
-          <p><%= m.interest%></p>
+          <p id="geo_right"><i class="fa-solid fa-location-dot"></i> <%= m.geo %></p>
+          <p class="gilroy_strong">About me</p>
+          <p class="gilroy_light"><%= m.description %></p>
+          <p class="gilroy_strong">Interests</p>
+          <p class="interests"><%= m.interest %></p>
         </div>
         <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
       </div>
