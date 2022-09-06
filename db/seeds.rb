@@ -99,7 +99,7 @@ gender: "female",
 account_type: "MatchSeeker",
 geo: "Wisconsin")
 file9 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662471932/MatcheMe/peggy_b81d8s.webp")
-peggy.photo.attach(io: file0, filename: "peggy_b81d8s.webp", content_type: "image/jg")
+peggy.photo.attach(io: file9, filename: "peggy_b81d8s.webp", content_type: "image/jg")
 peggy.save
 
 
@@ -134,7 +134,7 @@ file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662132178/d
 luca.photo.attach(io: file10, filename: "107921513_z3yk4e.jpg", content_type: "image/jpg")
 luca.save
 
-phoebe = User.create(first_name: "Phoebe", last_name: "Buffay", email: "phoebe@frieds.com", password: "123123", age: 40,
+phoebe = User.create(first_name: "Phoebe", last_name: "Buffay", email: "phoebe@friends.com", password: "123123", age: 40,
   description: "Call me 'the weird one'.",
   interest:"Cats and Guitars",
   gender: "female",
