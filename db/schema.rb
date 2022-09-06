@@ -54,6 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_105828) do
 
   create_table "matches", force: :cascade do |t|
     t.string "status"
+    t.boolean "block", default: false
     t.bigint "male_id", null: false
     t.bigint "female_id", null: false
     t.bigint "match_maker_id", null: false

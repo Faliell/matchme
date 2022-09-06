@@ -12,10 +12,16 @@ Rails.application.routes.draw do
   get "/female", to: "matches#female"
   get "/male", to: "matches#male"
 
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
 
-  resources :matches
+  resources :matches do
+    member do
+      patch :block_female
+      patch :block_male
+    end
+  end
 
 end

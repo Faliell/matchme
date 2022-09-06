@@ -10,7 +10,9 @@ class MatchesController < ApplicationController
   end
 
   def female
+    current_female = User.find(params[:current])
     females = User.where("gender ILIKE 'female' AND account_type ILIKE 'MatchSeeker'")
+    females = females - [current_female]
     @female = females.sample
     render json: { female: @female, photo: @female.photo.key }
   end
@@ -48,6 +50,28 @@ class MatchesController < ApplicationController
         match.match_maker.update!(points: result)
       end
     end
+  end
+
+  def block_female
+    @male = User.find(params[:id])
+    @female = current_user
+
+    founded_matches = Match.where(male: @male, female: @female)
+    founded_matches.each do |match|
+      match.update!(block: true)
+    end
+    redirect_to dashboard_path
+  end
+
+  def block_male
+    @male = current_user
+    @female = User.find(params[:id])
+
+    founded_matches = Match.where(male: @male, female: @female)
+    founded_matches.each do |match|
+      match.update!(block: true)
+    end
+    redirect_to dashboard_path
   end
 
   private
