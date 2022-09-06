@@ -16,7 +16,7 @@
 .person1 {
   background-color: #fffaf8;
   border-radius: .5vw;
-  padding: 1vw 1vw 4vw 1vw;
+  padding: 1vw 1vw 1.8vw 1vw;
   font-family: Gilroy-Light;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
   margin: 0 4vw 0 4vw;
@@ -127,6 +127,7 @@ font-size: .8;
   height: 3vw;
   transition: transform 0.4s;
   cursor: pointer;
+
 }
 
 #LogoShuffel:hover {
@@ -140,4 +141,9 @@ font-size: .8;
 
 #geo {
   color: rgb(92, 57, 57);
+}
+
+.flip_title {
+  font-size: 1.1rem;
+  color: #9C5F62;
 }
