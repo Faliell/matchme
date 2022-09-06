@@ -9,7 +9,7 @@
   <%end%>
   <% true_matches.uniq.each do |m| %>
     <div class="rlds" data-id="<%= m.id %>" data-chat-target="match">
-      <div type="button" class="btn-close close_card_button" aria-label="Close" data-id="<%= m.id %>" data-action="click->chat#hideChat"></div>
+      <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideChat"></div>
       <div class="rightds_imainf">
         <div class="img-seeker">
           <%= cl_image_tag m.photo.key, class: "img-right"%>
@@ -40,7 +40,7 @@
     <%end%>
     <% true_matches.uniq.each do |m| %>
       <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
-      <div type="button" class="btn-close close_card_button" aria-label="Close" data-id="<%= m.id %>" data-action="click->chat#hideChat"></div>
+      <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideChat"></div>
         <div class="rightds_imainf">
           <div class="img-seeker">
             <%= cl_image_tag m.photo.key, class: "img-right"%>
