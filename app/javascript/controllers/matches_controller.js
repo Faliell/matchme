@@ -60,8 +60,8 @@ export default class extends Controller {
       this.femaleInterestValue = data.female.interest;
       this.femaleInterestTarget.innerHTML = data.female.interest;
       this.femalePhotoValue = data.photo;
-      // this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/development/${data.photo}`;
-      this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/production/${data.photo}`;
+      this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/development/${data.photo}`;
+      //this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/production/${data.photo}`;
       this.femaleidTarget.value = data.female.id
     })
   };
@@ -83,8 +83,8 @@ export default class extends Controller {
       this.maleInterestValue = data.male.interest;
       this.maleInterestTarget.innerHTML = data.male.interest;
       this.malePhotoValue = data.photo;
-      // this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/development/${data.photo}`;
-      this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/production/${data.photo}`;
+      this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/development/${data.photo}`;
+      // this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/production/${data.photo}`;
       this.maleidTarget.value = data.male.id
     })
   };
