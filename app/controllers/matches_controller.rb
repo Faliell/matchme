@@ -50,6 +50,28 @@ class MatchesController < ApplicationController
     end
   end
 
+  def block_female
+    @male = User.find(params[:id])
+    @female = current_user
+
+    founded_matches = Match.where(male: @male, female: @female)
+    founded_matches.each do |match|
+      match.update!(block: true)
+    end
+    redirect_to dashboard_path
+  end
+
+  def block_male
+    @male = current_user
+    @female = User.find(params[:id])
+
+    founded_matches = Match.where(male: @male, female: @female)
+    founded_matches.each do |match|
+      match.update!(block: true)
+    end
+    redirect_to dashboard_path
+  end
+
   private
 
   def match_params

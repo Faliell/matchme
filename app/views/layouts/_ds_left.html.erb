@@ -5,7 +5,7 @@
       <% if current_user.gender == "female" %>
         <% true_matches = [] %>
         <% unless current_user.female_matches.empty? %>
-          <% current_user.female_matches.each do |match| %>
+          <% current_user.female_matches.where(block: false).each do |match| %>
             <% if match.status == "match" %>
               <% true_matches.push(match.male) %>
             <% end %>
@@ -33,7 +33,7 @@
       <% if current_user.gender == "male" %>
         <% true_matches = [] %>
         <% unless current_user.male_matches.empty? %>
-          <% current_user.male_matches.each do |match| %>
+          <% current_user.male_matches.where(block: false).each do |match| %>
             <% if match.status == "match" %>
               <% true_matches.push(match.female) %>
             <% end %>
