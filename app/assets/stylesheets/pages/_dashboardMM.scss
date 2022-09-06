@@ -1,6 +1,10 @@
+.cardfont {
+  font-family: Gilroy-Light;
+}
+
 .MMdashboard {
   margin: calc(70px + 5vh);
-  display: flex;
+  // display: flex;
 }
 
 .MMLeft {
@@ -18,6 +22,12 @@
 
 #yrmatches {
   padding-left: 1vw;
+  font-family: Gilroy-ExtraBold;
+}
+
+#yrmatches2 {
+  padding-left: 1vw;
+  font-family: Gilroy-Light;
 }
 
 .match_display {
@@ -28,7 +38,9 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  width: 50vw;
+  box-shadow: 0px 1px 2px #888888;
+
 }
 
 .Start_match {
@@ -59,6 +71,11 @@
   align-items: center;
 }
 
+.matchcenter a {
+  box-shadow: 0px 1px 2px #888888;
+
+}
+
 .MMRight {
   display: flex;
   flex-direction: column;
@@ -72,6 +89,13 @@
   border-radius: 1vw;
   font-family: Gilroy-Light;
   margin-bottom: 5vw;
+  box-shadow: 0px 1px 2px #888888;
+  width: 30vw;
+  color: #2a2a2a;
+}
+
+.inforight h3 {
+  font-size: 10px;
 }
 
 .MMRight H3{
@@ -85,7 +109,8 @@
 
 
 #mystats {
-  padding-left: 1vw;
+  font-family: Gilroy-Light;
+
 }
 
 
@@ -94,13 +119,21 @@
   width: 3.5vw;
   border-radius: 50%;
   object-fit: cover;
+  opacity: 0.8;
 }
 
 #created_at {
   margin: auto 0;
+  color: #727272;
+  font-family: Gilroy-Light;
+
 }
 
 
 .checked {
   color: yellow;
+}
+
+.spacing {
+  width: 33%;
 }
