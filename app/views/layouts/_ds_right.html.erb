@@ -12,7 +12,7 @@
       <div type="button" class="btn-close close_card_button" aria-label="Close" data-id="<%= m.id %>" data-action="click->chat#hideChat"></div>
       <div class="rightds_imainf">
         <div class="img-seeker">
-          <%= cl_image_tag m.photo.key, class: "img-right"%>
+          <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right"  %>
         </div>
       </div>
       <div class="description container">
@@ -43,7 +43,7 @@
       <div type="button" class="btn-close close_card_button" aria-label="Close" data-id="<%= m.id %>" data-action="click->chat#hideChat"></div>
         <div class="rightds_imainf">
           <div class="img-seeker">
-            <%= cl_image_tag m.photo.key, class: "img-right"%>
+            <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
           </div>
         </div>
         <div class="description container">
