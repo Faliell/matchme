@@ -30,10 +30,17 @@
   font-family: Amerigo_BT;
 }
 
+.description h3{
+  margin-top: 1.8vw;
+  font-family: Amerigo_BT;
+}
+
 #geo_right {
   font-family: Gilroy-ExtraBold;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   color: #4D4D4E;
+  opacity: .8;
+  top: -.3vw;
 }
 
 .gilroy_strong {
@@ -55,4 +62,33 @@
   padding: 0 1vw;
   margin-right: auto;
   font-size: 1vw;
+}
+
+
+.close_card_button {
+  color: #4D4D4E;
+  top: 1vw;
+  right: 1vw;
+  background-color: #FFDDCE;
+  position: absolute;
+  border-radius: .2vw;
+}
+
+.close_card_button:hover {
+  color: #4D4D4E;
+  background-color: #FF9282;
+}
+
+
+.cloud_background {
+  position:relative;
+  width: 3vw;
+  bottom: .5vw;
+  right: 2.8vw;
+}
+
+
+#Name_age {
+  display: flex;
+  bottom: 0;
 }
