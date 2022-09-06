@@ -94,13 +94,23 @@ kaia.save
 
 peggy = User.create(first_name: "Peggy", last_name: "Bundy", email: "peggy@bundy.com", password: "123123", age: 46,
 description: "I have no opinions on politics, religion, science, starving people, nuclear holocaust or recycling. ",
-interest:"Televion",
+interest:"Television",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "Wisconsin")
 file9 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662471932/MatcheMe/peggy_b81d8s.webp")
 peggy.photo.attach(io: file9, filename: "peggy_b81d8s.webp", content_type: "image/jg")
 peggy.save
+
+tokyo = User.create(first_name: "Tokyo", last_name: "Silene", email: "tokyo@heist.com", password: "123123", age: 35,
+description: "I'm hot-headed, impulsive, and rash.",
+interest:"Guns and Money",
+gender: "female",
+account_type: "MatchSeeker",
+geo: "Unknown")
+file14 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662476597/MatcheMe/Tokyo_jzcxao.webp")
+tokyo.photo.attach(io: file14, filename: "Tokyo_jzcxao.webp", content_type: "image/jg")
+tokyo.save
 
 
 
