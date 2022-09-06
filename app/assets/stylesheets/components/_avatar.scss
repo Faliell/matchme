@@ -1,7 +1,16 @@
 .avatar {
   width: 50px;
+  height: 50px;
   border-radius: 50%;
-}
+  }
+
+  .avatardiv {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
 
 .avatar:hover {
   filter:grayscale(80%);
