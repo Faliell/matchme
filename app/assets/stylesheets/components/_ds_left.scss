@@ -10,7 +10,7 @@
 }
 
 #matchtitle {
-  background-color: #FF9282;
+  background-color: #F5AF98;
   padding: 1vw;
   border-radius: 1.5vw;
   color: #FFEEEE;
@@ -102,4 +102,28 @@
 .Chatlink:hover {
   text-decoration: none;
   color:white;
+}
+
+
+.no_match {
+  font-family: Gilroy-Light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  align-items: center;
+}
+
+.no_match img{
+  border-radius: .8vw;
+  width: 20vw;
+  object-fit: cover;
+  filter:saturate(200%)
+}
+
+
+.no_match p{
+  font-size: 1.4vw;
+  margin: 2vw;
 }

@@ -4,9 +4,7 @@
 }
 
 #MMLogo {
-  height: 45px;
-  position:absolute;
-  top: 10px;
+  height: 6vh;
 }
 
 .dropdown-menu {
@@ -24,13 +22,28 @@
 
 .dropdown-item:hover {
   background-color: #E5A6AD;
-  border-radius: px;
-
+  border-radius: 0.5vw;
 }
 
 .name_ava {
+  font-family: Gilroy-Light;
+  font-size: 2.5vh;
+  margin-top: 2vh;
+  margin-right: 1vw;
+}
 
-  font-family: Gilroy-ExtraBold;
-  margin-right: 1rem;
-  margin-top: 1vw;
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.nav-item {
+  text-align: right;
+}
+
+.dropdown-menu.dropdown-menu-end {
+  position: absolute;
 }
