@@ -35,10 +35,11 @@
   border-color: #93756E;
   margin: .4vw auto;
   object-fit: cover;
-  height: 12vw;
+  height: 13vw;
   width: 10vw;
   cursor: pointer;
   transition: 0.2s;
+  opacity: 0.9;
 }
 
 .img-fluid:hover {
@@ -92,10 +93,10 @@
 
 .Chatlink {
   position: relative;
-  bottom: 11.8vw;
-  left: 6.7vw;
+  bottom: 12.7vw;
+  left: 6.5vw;
   z-index: 2;
-  background-color: #DD8F97;
+  background-color: #dd8f97b8;
   border-radius: .7vw;
   color: #ffffff;
   font-family: 'Gilroy-Light';
@@ -103,13 +104,15 @@
   padding: .3vw;
   font-size: 1vw;
   border: none;
-  transition: transform 0.6s;
+  transition: 0.2s;
   text-decoration: none;
 }
 
 .Chatlink:hover {
   text-decoration: none;
   color:white;
+  background-color: #dd8f97e0;
+
 }
 
 
