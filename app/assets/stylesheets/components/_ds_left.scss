@@ -144,11 +144,25 @@
   bottom: 11.8vw;
   left: 6.7vw;
   z-index: 2;
-  background-color: white;
   color: #DD8F97;
+  background-color: white;
   font-family: Gilroy-Light;
-  font-size: 1vw;
+  font-size: 0.6vw;
   border: none;
-  transition: transform 0.6s;
-  text-decoration: none;
+  transition: 0.3s;
+  margin-bottom: 14px;
+  margin-right: 10px;
+}
+
+.remove:hover {
+  bottom: 11.8vw;
+  left: 6.7vw;
+  z-index: 2;
+  background-color: white;
+  color: #991d29d1;
+  font-family: Gilroy-Light;
+  font-size: 0.6vw;
+  border: none;
+  transition: 0.3s;
+
 }
