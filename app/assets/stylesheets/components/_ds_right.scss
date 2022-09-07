@@ -42,7 +42,6 @@
 
 #geo_right {
   font-family: 'Gilroy-ExtraBold';
-  src: font-url("/assets/fonts/Gilroy-ExtraBold.otf");
   font-size: 1.1vw;
   color: #4D4D4E;
   opacity: .8;
@@ -51,15 +50,12 @@
 
 .gilroy_strong {
   font-family: 'Gilroy-ExtraBold';
-  src: font-url("/assets/fonts/Gilroy-ExtraBold.otf");
-
   margin-bottom: 0;
 }
 
 
 .gilroy_light {
   font-family: 'Gilroy-Light';
-  // src: font-url("/assets/fonts/Gilroy-Light.otf");
 }
 
 .interests {
@@ -111,4 +107,3 @@
   justify-content: flex-end;
   margin-top: 2vh;
 }
-
