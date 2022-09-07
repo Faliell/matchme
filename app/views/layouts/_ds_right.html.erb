@@ -25,7 +25,7 @@
         <p class="gilroy_strong">About me</p>
         <p class="gilroy_light"><%= m.description%></p>
         <p class="gilroy_strong">Interest</p>
-        <p class="interests"><%= m.interest%></p>
+        <p class="interests"><%= m.interest %></p>
       </div>
       <h3 style = "font-family: Amerigo_BT">Chat with <%= m.first_name %></h3>
       <% end %>
@@ -58,11 +58,19 @@
           <p class="gilroy_strong">About me</p>
           <p class="gilroy_light mt-3"><%= m.description %></p>
           <p class="gilroy_strong">Interests</p>
-          <p class="interests mt-3"><%= m.interest %></p>
+          <div class="d-flex flex-row ">
+            <% interest_array = m.interest.split(";") %>
+            <% interest_array.each do |i| %>
+              <div><p class="interests mt-3">
+              <%= i %>
+              </div>
+            </p>
+            <% end %>
+          </div>
         </div>
-
-        <h1>Chat with <%= m.first_name %></h1>
-
+        <div class="d-flex justify-content-center pb-4">
+        <%=link_to "Chat with #{m.first_name}" , chatroom_path(Chatroom.where(male: current_user, female:m ).first.id), class:"Chatlinkdash p-3" %>
+        </div>
       </div>
     <%end%>
   <%end%>
