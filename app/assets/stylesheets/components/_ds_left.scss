@@ -16,7 +16,6 @@
   border-radius: 1.5vw;
   color: #ffffff;
   font-family: 'Gilroy-Light';
-  src: font-url("/assets/fonts/Gilroy-Light.otf");
   text-align: center;
   margin: 0 12vw;
   font-size: 1vw;
@@ -100,7 +99,6 @@
   border-radius: .7vw;
   color: #ffffff;
   font-family: 'Gilroy-Light';
-  src: font-url("/assets/fonts/Gilroy-Light.otf");
   padding: .3vw;
   font-size: 1vw;
   border: none;
@@ -118,7 +116,6 @@
 
 .no_match {
   font-family: 'Gilroy-Light';
-  src: font-url("/assets/fonts/Gilroy-Light.otf");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -149,9 +146,16 @@
   font-family: Gilroy-Light;
   font-size: 0.6vw;
   border: none;
+<<<<<<< HEAD
   transition: 0.3s;
   margin-bottom: 14px;
   margin-right: 10px;
+=======
+  transition: 0.2s;
+  text-decoration: none;
+  margin-bottom: 15px;
+  margin-right: 5px;
+>>>>>>> ce2d9b9c3b4855ef78c28a9a4f86a78159cee308
 }
 
 .remove:hover {
@@ -159,10 +163,37 @@
   left: 6.7vw;
   z-index: 2;
   background-color: white;
+<<<<<<< HEAD
   color: #991d29d1;
   font-family: Gilroy-Light;
   font-size: 0.6vw;
   border: none;
   transition: 0.3s;
+
+=======
+  color: #ad2432c9;
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+
+.Chatlinkdash {
+  z-index: 2;
+  background-color: #dd8f97b8;
+  border-radius: .7vw;
+  color: #ffffff;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
+  padding: .3vw;
+  font-size: 1vw;
+  border: none;
+  transition: 0.2s;
+  text-decoration: none;
+>>>>>>> ce2d9b9c3b4855ef78c28a9a4f86a78159cee308
+}
+
+.Chatlinkdash:hover {
+  text-decoration: none;
+  color:white;
+  background-color: #dd8f97e0;
 
 }
