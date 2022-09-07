@@ -10,8 +10,9 @@ require "open-uri"
 
 
 Match.destroy_all
-Chatroom.destroy_all
 User.destroy_all
+Chatroom.destroy_all
+
 
 puts "Destroy database"
 
@@ -78,7 +79,7 @@ interest:"Coffee",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "New York")
-file7 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662377143/MatcheMe/rachel_qz4vpf.jpg")
+file7 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/c_crop,g_face,h_384,q_100,y_0/v1662377143/MatcheMe/rachel_qz4vpf.jpg")
 rachel.photo.attach(io: file7, filename: "rachel_qz4vpf.jpg", content_type: "image/jg")
 rachel.save
 
