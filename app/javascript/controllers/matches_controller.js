@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   static values = {
+    environment: String,
     femaleFirstName: String,
     femaleLastName: String,
     femaleId: Number,
@@ -41,6 +42,7 @@ export default class extends Controller {
   ];
 
   connect() {
+    console.log(this.environmentValue);
   };
 
   changeFemale() {
@@ -60,8 +62,7 @@ export default class extends Controller {
       this.femaleInterestValue = data.female.interest;
       this.femaleInterestTarget.innerHTML = data.female.interest;
       this.femalePhotoValue = data.photo;
-      this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/development/${data.photo}`;
-      //this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/production/${data.photo}`;
+      this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/${this.environmentValue}/${data.photo}`;
       this.femaleidTarget.value = data.female.id
 
     })
@@ -84,10 +85,9 @@ export default class extends Controller {
       this.maleInterestValue = data.male.interest;
       this.maleInterestTarget.innerHTML = data.male.interest;
       this.malePhotoValue = data.photo;
-      this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/development/${data.photo}`;
-      // this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/production/${data.photo}`;
+      this.malePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/${this.environmentValue}/${data.photo}`;
       this.maleidTarget.value = data.male.id
-    
+
     })
   };
 }
