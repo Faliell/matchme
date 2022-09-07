@@ -1,6 +1,12 @@
 .bodyseeker {
-  background-color: #eec0c05e;
+  background-color: #eec0c033;
   height: 91vh;
+
+}
+
+.namematchchat h2{
+  font-family: 'Gilroy-Light';
+  color: #a94e4e;
 
 }
 
@@ -16,8 +22,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 1px 1px 1px #ffe3e3ef;
-
+  box-shadow: 1px 1px #fff2f28a;
+  opacity: 0.9;
   }
 
   .sendmessage-button {
