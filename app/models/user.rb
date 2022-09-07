@@ -11,4 +11,9 @@ class User < ApplicationRecord
   has_many :female_chatrooms, class_name: 'Chatroom', foreign_key: 'female_id'
 
   has_one_attached :photo
+
+  has_many :notifications, as: :recipient
+
+  has_noticed_notifications
+
 end
