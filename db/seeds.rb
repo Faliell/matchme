@@ -113,27 +113,15 @@ file14 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662476597
 tokyo.photo.attach(io: file14, filename: "Tokyo_jzcxao.webp", content_type: "image/jg")
 tokyo.save
 
+rajesh = User.create(first_name: "Rajesh", last_name: "Koothrappali", email: "raj@bbt.com", password: "123123", age: 37, description: "I am a scientist", interest:"My dog", gender: "male", account_type: "MatchSeeker", geo: "California")
+file8 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940046/development/7cde0837350ccbfebb1e0b8e517e85c2_cfy29b.jpg")
+rajesh.photo.attach(io: file8, filename: "7cde0837350ccbfebb1e0b8e517e85c2_cfy29b.jpg.jpg", content_type: "image/jg")
+rajesh.save
 
-
-# kratos = User.create(first_name: "Kratos", last_name: "", email: "kratos@war.com", password: "123123", age: 200, description: "I am a semi-god", interest:"Chaos and blood", gender: "male", account_type: "MatchSeeker", geo: "Greece")
-# file6 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/God_of_warPS4_zrkvbd.jpg")
-# kratos.photo.attach(io: file6, filename: "God_of_warPS4_zrkvbd.jpg", content_type: "image/jg")
-# kratos.save
-
-# ken = User.create(first_name: "Ken", last_name: "Masters", email: "ken@fight.com", password: "123123", age: 36, description: "I am a street fighter", interest:"fights", gender: "male", account_type: "MatchSeeker", geo: "Japan")
-# file7 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/fc684796688f8d9724bfde295ea8321f64431543r1-915-1000v2_00_mqisz7.jpg")
-# ken.photo.attach(io: file7, filename: "fc684796688f8d9724bfde295ea8321f64431543r1-915-1000v2_00_mqisz7.jpg", content_type: "image/jg")
-# ken.save
-
-# rajesh = User.create(first_name: "Rajesh", last_name: "Koothrappali", email: "raj@bbt.com", password: "123123", age: 37, description: "I am a scientist", interest:"My dog", gender: "male", account_type: "MatchSeeker", geo: "California")
-# file8 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940046/development/7cde0837350ccbfebb1e0b8e517e85c2_cfy29b.jpg")
-# rajesh.photo.attach(io: file8, filename: "7cde0837350ccbfebb1e0b8e517e85c2_cfy29b.jpg.jpg", content_type: "image/jg")
-# rajesh.save
-
-luke = User.create(first_name: "Luke", last_name: "Skywalker", email: "luke@light.com", password: "123123", age: 53, description: "I am a Jedi", interest:"Politics and family.", gender: "male", account_type: "MatchSeeker", geo: "Tattoine")
-file9 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/z-luke-skywalker-mark-hamill_yjpnq9.jpg")
-luke.photo.attach(io: file9, filename: "z-luke-skywalker-mark-hamill_yjpnq9.jpg", content_type: "image/jg")
-luke.save
+# luke = User.create(first_name: "Luke", last_name: "Skywalker", email: "luke@light.com", password: "123123", age: 53, description: "I am a Jedi", interest:"Politics and family.", gender: "male", account_type: "MatchSeeker", geo: "Tattoine")
+# file9 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/z-luke-skywalker-mark-hamill_yjpnq9.jpg")
+# luke.photo.attach(io: file9, filename: "z-luke-skywalker-mark-hamill_yjpnq9.jpg", content_type: "image/jg")
+# luke.save
 
 forrest = User.create(first_name: "Forrest", last_name: "Gump", email: "forrest@run.com", password: "123123", age: 35, description: "I am Forrest Gump", interest:"Running and benches.", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
 file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg")
