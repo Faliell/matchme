@@ -25,7 +25,6 @@
 
 .sign_up_to p{
   font-family: 'Gilroy-Light';
-  src: font-url("/assets/fonts/Gilroy-Light.otf");
   font-size: 1.3vw;
 }
 
@@ -63,7 +62,6 @@
 .TextSelect p{
   margin: .5vw;
   font-family: 'Gilroy-ExtraBold';
-  src: font-url("/assets/fonts/Gilroy-ExtraBold.otf");
   text-align: left;
   width: 20vw;
 }
@@ -75,7 +73,6 @@
 #lower {
   font-size: 1.2vw;
   font-family: 'Gilroy-Light';
-  src: font-url("/assets/fonts/Gilroy-Light.otf");
 }
 
 #checked {
@@ -94,14 +91,12 @@
 
 .SelSI p{
   font-family: 'Gilroy-Light';
-  src: font-url("/assets/fonts/Gilroy-Light.otf");
   font-size: 1vw;
   margin: auto 0;
 }
 
 .SelSI a{
   font-family: 'Gilroy-ExtraBold';
-  src: font-url("/assets/fonts/Gilroy-ExtraBold.otf");
   font-size: 1vw;
   text-decoration: none;
   color: #DD8F97;
