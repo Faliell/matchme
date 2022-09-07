@@ -1,13 +1,19 @@
 .bodyseeker {
   background-color: #eec0c033;
-  height: 91vh;
+  height: 94vh;
 
 }
 
 .namematchchat h2{
   font-family: 'Gilroy-Light';
-  color: #a94e4e;
 
+  color: #a94e4e;
+}
+
+.namematchchat {
+  font-family: 'Gilroy-Light';
+
+  color: #a94e4e;
 }
 
 .chatroom {
@@ -16,6 +22,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 0.5vw;
   box-shadow: 0px 1px 2px #888888;
+  position: relative;
 }
 
 .avatar_2 {
@@ -24,6 +31,8 @@
   border-radius: 50%;
   box-shadow: 1px 1px #fff2f28a;
   opacity: 0.9;
+  object-fit: cover;
+
   }
 
   .sendmessage-button {
@@ -43,6 +52,10 @@
 
 .formmessage {
   font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
+
+  bottom: 0px;
+  width: 96%;
 }
 
 

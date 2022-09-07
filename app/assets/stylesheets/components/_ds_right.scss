@@ -20,30 +20,29 @@
 
 
 .img-right {
-  object-fit: cover;
-  object-position: 100% 20%;
-  width: 100%;
-  height: 40vh;
+  // object-fit: cover;
+  // object-position: 100% 20%;
+  // width: 100%;
+  height: 30vh;
 }
 
 .description {
   display: relative;
   flex-direction: column;
-  min-height: 40vh;
+  height: 35vh;
 }
 
 .description h1{
-  margin-top: 1vw;
   font-family: Amerigo_BT;
 }
 
 .description h3{
-  margin-top: 1.8vw;
   font-family: Amerigo_BT;
+
 }
 
 #geo_right {
-  font-family: Gilroy-ExtraBold;
+  font-family: 'Gilroy-ExtraBold';
   font-size: 1.1vw;
   color: #4D4D4E;
   opacity: .8;
@@ -51,23 +50,23 @@
 }
 
 .gilroy_strong {
- font-family: Gilroy-ExtraBold;
- margin-bottom: 0;
+  font-family: 'Gilroy-ExtraBold';
+  margin-bottom: 0;
 }
 
 
 .gilroy_light {
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
 }
 
 .interests {
   font-family: Poppins;
-  background-color: #FFDDCE;
+  background-color: #e67272af;
   border-radius: 1.5vw;
-  color: #FF9282;
+  color: #fffdfd;
   justify-items: start;
   padding: 0 1vw;
-  margin-right: auto;
+  margin-right: 0.4vw;
   font-size: 1vw;
   margin-bottom: 1vh;
   margin-top: 1vh;
@@ -75,29 +74,40 @@
 
 
 .close_card_button {
-  color: #4D4D4E;
   top: 1vw;
   right: 1vw;
-  background-color: #FFDDCE;
+  background-color: #fffdfce8;
   position: absolute;
-  border-radius: .2vw;
+  border-radius: 50%;
+  transition: 0.3s;
+  padding: 0.5vw;
 }
 
 .close_card_button:hover {
-  color: #4D4D4E;
-  background-color: #FF9282;
+  color: #4d4d4ec9;
+  background-color: #fffafa;
+  opacity: 0.8;
 }
 
 
 .cloud_background {
   position:relative;
-  width: 3vw;
+  width: 2.5vw;
   bottom: .5vw;
-  right: 2.6vw;
+  right: 2.1vw;
 }
 
 
 #Name_age {
   display: flex;
   bottom: 0;
+  margin-top: -6vh;
+  width: 75%;
+  align-items: baseline;
+}
+
+.blockbutton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2vh;
 }

@@ -1,28 +1,29 @@
 // Specific CSS for your home-page
 @font-face {
   font-family: "Amerigo Bold BT";
-  src: url('assets/Amerigo_Bold_BT');
+  src: font-url('Amerigo_Bold_BT.ttf');
 }
 
 @font-face {
   font-family: "Amerigo BT";
-  src: url('assets/Amerigo_BT');
+  src: font-url('Amerigo_BT.ttf');
 }
 
 @font-face {
-  font-family: "Gilroy-ExtraBold";
-  src: url('assets/Gilroy-ExtraBold');
+  font-family: 'Gilroy-ExtraBold';
+  src: font-url("Gilroy-ExtraBold.otf");
+
 }
 
 @font-face {
   font-family: "Gilroy-Light";
-  src: url('assets/Gilroy-Light');
+  src: font-url('Gilroy-Light.otf');
 }
 
 
 @font-face {
   font-family: "Poppins";
-  src: url('assets/Poppins-SemiBold');
+  src: font-url('Poppins-SemiBold.otf');
 }
 
 .btn_landing_start {
