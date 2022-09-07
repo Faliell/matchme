@@ -60,7 +60,7 @@ interest:"Lost thombs.",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "London")
-file5 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662471356/MatcheMe/monica_maeqnq.jpg")
+file5 = URI.open("https:///res-console.cloudinary.com/dwhirvd5m/thumbnails/transform/v1/image/upload/v1662538425/https:///res-console.cloudinary.com/dwhirvd5m/thumbnails/transform/v1/image/upload/Y19jcm9wLGhfNzY1/v1662538425/TWF0Y2hlTWUvbW9uaWNhX21hZXFucQ==/template_primary")
 monica.photo.attach(io: file5, filename: "monica_maeqnq.jpg", content_type: "image/jg")
 monica.save
 
