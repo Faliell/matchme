@@ -7,13 +7,15 @@
 
   <div class="login">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
+      <%= f.error_notification %>
+    <%= render 'devise/shared/error_messages' %>
       <div class="form-inputs">
         <%= f.input :email,
-                    required: false,
+                    required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" } %>
         <%= f.input :password,
-                    required: false,
+                    required: true,
                     input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
@@ -29,6 +31,7 @@
         </div>
       </div>
     <% end %>
+
 
   </div>
 </body>

@@ -1,7 +1,12 @@
 <div class="background_left">
   <div class="leftside_ds container">
-    <div class="mb-2">
-    <p id="matchtitle">My matches</p>
+    <% if current_user.female_matches.empty? && current_user.male_matches.empty? %>
+      <div class="container no_match">
+        <p>Please wait patiently, our matchmakers are doing their best to find your perfect match!</p>
+        <img src="https://media3.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif?cid=ecf05e4798a60vhfyomj9b1vpnlus4j9ie50ew0bmlzkocyb&rid=giphy.gif&ct=g" width="480" height="317">
+      </div>
+    <% else %>
+    <p id="matchtitle">Matches</p>
     </div>
     <div class="row">
       <% if current_user.gender == "female" %>
@@ -24,7 +29,7 @@
                   <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
                   <p class="age"><%= m.age %></p>
                 </div>
-                <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id), class:"Chatlink"%>
+                <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id), class:"Chatlink" %>
               </div>
               </div>
             <% end %>
@@ -60,5 +65,6 @@
         <% end %>
       <% end %>
     </div>
+    <% end %>
   </div>
 </div>

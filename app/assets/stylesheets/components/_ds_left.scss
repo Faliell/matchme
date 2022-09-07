@@ -1,5 +1,5 @@
 .background_left {
-  background-color: #FFFBFA;
+  background-color: #ffddceb1;
   width: 40vw;
   height: 100%;
   padding: 2vw;
@@ -10,14 +10,16 @@
 }
 
 #matchtitle {
-  background-color: #FF9282;
-  padding: 1vw;
+  background-color: #D06E6E;
+  box-shadow: 2px 1px 3px #381c1c95;
+  padding: 5px 0;
   border-radius: 1.5vw;
-  color: #FFEEEE;
-  font-family: Gilroy-ExtraBold;
+  color: #ffffff;
+  font-family: Gilroy-Light;
   text-align: center;
   margin: 0 12vw;
-  font-size: 1.2vw;
+  font-size: 1vw;
+  margin-bottom: 1.7vh;
   }
 
 .match {
@@ -28,20 +30,19 @@
 
 .img-fluid {
   border-radius: .7vw;
-  border: solid;
-  border-width: .2vw;
+  border: solid 4px;
   border-color: #93756E;
   margin: .4vw auto;
   object-fit: cover;
   height: 18vw;
   width: 14vw;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .img-fluid:hover {
-  border: solid;
-  border-width: .2vw;
-  border-color: #FF9282;
+  border: solid 4px;
+  border-color: #9d574ec1;
 }
 
 
@@ -66,7 +67,9 @@
 .fullname {
   color: whitesmoke;
   font-size: .9vw;
-  text-shadow: 1px 1px 3px #1e1e1e
+  text-shadow: 1px 1px 3px #1e1e1e;
+  font-family: Gilroy-Light;
+
 }
 
 .location {
@@ -102,4 +105,28 @@
 .Chatlink:hover {
   text-decoration: none;
   color:white;
+}
+
+
+.no_match {
+  font-family: Gilroy-Light;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  align-items: center;
+}
+
+.no_match img{
+  border-radius: .8vw;
+  width: 20vw;
+  object-fit: cover;
+  filter:saturate(200%)
+}
+
+
+.no_match p{
+  font-size: 1.4vw;
+  margin: 2vw;
 }

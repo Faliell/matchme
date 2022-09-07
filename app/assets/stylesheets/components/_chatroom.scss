@@ -1,0 +1,63 @@
+.bodyseeker {
+  background-color: #eec0c033;
+  height: 91vh;
+
+}
+
+.namematchchat h2{
+  font-family: 'Gilroy-Light';
+  color: #a94e4e;
+
+}
+
+.chatroom {
+  height: 80vh;
+  overflow: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5vw;
+  box-shadow: 0px 1px 2px #888888;
+}
+
+.avatar_2 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 1px 1px #fff2f28a;
+  opacity: 0.9;
+  }
+
+  .sendmessage-button {
+    width: 15vw;
+    background-color: #c37577;
+    border: none;
+    color: white;
+    transition: 0.4s;
+
+  }
+
+  .sendmessage-button:hover {
+    background-color: #ba7274dd;
+    color: white;
+  }
+
+
+.formmessage {
+  font-family: 'Gilroy-Light';
+}
+
+
+.container::-webkit-scrollbar {
+  width: 0.3vw;               /* width of the entire scrollbar */
+}
+
+.container::-webkit-scrollbar-track {
+  background: #ffbcbfa7;        /* color of the tracking area */
+  border-radius: 10vh;       /* roundness of the scroll thumb */
+
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #d06e6e94;    /* color of the scroll thumb */
+  border-radius: 10vh;       /* roundness of the scroll thumb */
+ /* creates padding around scroll thumb */
+}

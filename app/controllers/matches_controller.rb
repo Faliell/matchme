@@ -10,7 +10,9 @@ class MatchesController < ApplicationController
   end
 
   def female
+    current_female = User.find(params[:current])
     females = User.where("gender ILIKE 'female' AND account_type ILIKE 'MatchSeeker'")
+    females = females - [current_female]
     @female = females.sample
     render json: { female: @female, photo: @female.photo.key }
   end
