@@ -8,26 +8,31 @@
   <%end%>
   <% true_matches.uniq.each do |m| %>
     <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
-      <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideChat"></div>
-      <div class="rightds_imainf">
-        <div class="img-seeker">
-          <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right"  %>
+      <div class="Image_description">
+        <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideCard"></div>
+        <div class="rightds_imainf">
+          <div class="img-seeker">
+            <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right"  %>
+          </div>
+        </div>
+        <div class="description container">
+          <div id="Name_age"><h1><%= m.first_name %> <%= m.last_name %></h1><h3>, <%= m.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
+          <p id="geo_right"><i class="fa-solid fa-location-dot geo_right"></i><%= m.geo %></p>
+          <p class="gilroy_strong">About me</p>
+          <p class="gilroy_light"><%= m.description%></p>
+          <p class="gilroy_strong">Interest</p>
+          <p class="interests"><%= m.interest%></p>
         </div>
       </div>
-      <div class="description container">
-        <div id="Name_age"><h1><%= m.first_name %> <%= m.last_name %></h1><h3>, <%= m.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
-        <p id="geo_right"><i class="fa-solid fa-location-dot geo_right"></i><%= m.geo %></p>
-        <p class="gilroy_strong">About me</p>
-        <p class="gilroy_light"><%= m.description%></p>
-        <p class="gilroy_strong">Interest</p>
-        <p class="interests"><%= m.interest%></p>
+      <div class="render_chat d-none" data-chat-target="chat">
+        <h3 style = "font-family: Amerigo_BT">Chat with <%= m.first_name %></h3>
+        <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
+        <%=button_to "Block Match", block_female_match_path(m), method: :patch%>
       </div>
-      <h3 style = "font-family: Amerigo_BT">Chat with <%= m.first_name %></h3>
-      <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
-      <%=button_to "Block Match", block_female_match_path(m), method: :patch%>
       <% end %>
     </div>
-  <%end%>
+  <% end %>
+
   <% if current_user.gender == "male" %>
     <% true_matches = [] %>
     <% current_user.male_matches.where(block: false).each do |match| %>
@@ -37,23 +42,27 @@
     <%end%>
     <% true_matches.uniq.each do |m| %>
       <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
-        <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideChat"></div>
-        <div class="rightds_imainf">
-          <div class="img-seeker">
-            <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
+        <div class="Image_description">
+          <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideCard"></div>
+          <div class="rightds_imainf">
+            <div class="img-seeker">
+              <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
+            </div>
+          </div>
+          <div class="description container">
+            <div id="Name_age"><h1><%= m.first_name %> <%= m.last_name %></h1><h3>, <%= m.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
+            <p id="geo_right"><i class="fa-solid fa-location-dot"></i> <%= m.geo %></p>
+            <p class="gilroy_strong">About me</p>
+            <p class="gilroy_light"><%= m.description %></p>
+            <p class="gilroy_strong">Interests</p>
+            <p class="interests"><%= m.interest %></p>
           </div>
         </div>
-        <div class="description container">
-          <div id="Name_age"><h1><%= m.first_name %> <%= m.last_name %></h1><h3>, <%= m.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
-          <p id="geo_right"><i class="fa-solid fa-location-dot"></i> <%= m.geo %></p>
-          <p class="gilroy_strong">About me</p>
-          <p class="gilroy_light"><%= m.description %></p>
-          <p class="gilroy_strong">Interests</p>
-          <p class="interests"><%= m.interest %></p>
+        <div class="render_chat d-none" data-chat-target="chat">
+          <h3 style = "font-family: Amerigo_BT">Chat with <%= m.first_name %></h3>
+          <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
+          <%=button_to "Block Match", block_male_match_path(m), method: :patch%>
         </div>
-        <h1>Chat with <%= m.first_name %></h1>
-        <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
-        <%=button_to "Block Match", block_male_match_path(m), method: :patch%>
       </div>
     <%end%>
   <%end%>

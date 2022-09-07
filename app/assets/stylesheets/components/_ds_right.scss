@@ -9,6 +9,7 @@
 }
 
 .rlds {
+  display: relative;
   background-color: #ffffff;
   border-radius: 1.2vw;
   overflow: hidden;
@@ -26,8 +27,9 @@
 }
 
 .description {
-  display: flex;
+  display: relative;
   flex-direction: column;
+  min-height: 40vh;
 }
 
 .description h1{
@@ -67,6 +69,8 @@
   padding: 0 1vw;
   margin-right: auto;
   font-size: 1vw;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
 }
 
 

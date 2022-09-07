@@ -9,17 +9,17 @@ export default class extends Controller {
     console.log(this.hasMatchTarget)
   }
 
-  showChat(event) {
+  showCard(event) {
     let id = event.currentTarget.dataset.id;
-    console.log(id)
     let target = this.matchTargets.find(match => match.dataset.id == id);
     this.matchTargets.forEach(card => card.classList.add("d-none"))
     target.classList.remove("d-none")
   }
 
-  hideChat(event) {
+  hideCard(event) {
     let id = event.currentTarget.dataset.id;
-    let target = this.matchTargets.find(match => match.dataset.id == id);
     this.matchTargets.forEach(card => card.classList.add("d-none"))
   }
+
+
 }
