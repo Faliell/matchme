@@ -58,7 +58,7 @@ interest:"Lost thombs.",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "London")
-file5 = URI.open("https:///res-console.cloudinary.com/dwhirvd5m/thumbnails/transform/v1/image/upload/v1662538425/https:///res-console.cloudinary.com/dwhirvd5m/thumbnails/transform/v1/image/upload/Y19jcm9wLGhfNzY1/v1662538425/TWF0Y2hlTWUvbW9uaWNhX21hZXFucQ==/template_primary")
+file5 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662471356/MatcheMe/monica_maeqnq.jpg")
 monica.photo.attach(io: file5, filename: "monica_maeqnq.jpg", content_type: "image/jg")
 monica.save
 
@@ -71,14 +71,15 @@ file6 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662370691/
 katniss.photo.attach(io: file6, filename: "katniss_urizqg.jpg", content_type: "image/jg")
 katniss.save
 
+
 rachel = User.create(first_name: "Rachel", last_name: "Greene", email: "rachel@friends.com", password: "123123", age: 33,
 description: "Funny and spirited but pretty self-involved. I'm always here for my friends.",
 interest:"Coffee",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "New York")
-file7 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/c_crop,g_face,h_384,q_100,y_0/v1662377143/MatcheMe/rachel_qz4vpf.jpg")
-rachel.photo.attach(io: file7, filename: "rachel_qz4vpf.jpg", content_type: "image/jg")
+file7 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662376833/MatcheMe/250_j9tw3t.jpg")
+rachel.photo.attach(io: file7, filename: "250_j9tw3t.jpg", content_type: "image/jg")
 rachel.save
 
 kaia = User.create(first_name: "Kaia", last_name: "Gerber", email: "kaia@model.com", password: "123123", age: 21,

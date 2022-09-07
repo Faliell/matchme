@@ -6,8 +6,8 @@
 
 .namematchchat h2{
   font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
   color: #a94e4e;
-
 }
 
 .chatroom {
@@ -25,6 +25,8 @@
   border-radius: 50%;
   box-shadow: 1px 1px #fff2f28a;
   opacity: 0.9;
+  object-fit: cover;
+
   }
 
   .sendmessage-button {
@@ -44,6 +46,7 @@
 
 .formmessage {
   font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
 
   bottom: 0px;
   width: 96%;

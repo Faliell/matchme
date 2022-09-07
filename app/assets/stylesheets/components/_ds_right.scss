@@ -28,20 +28,21 @@
 .description {
   display: flex;
   flex-direction: column;
+  height: 35vh;
 }
 
 .description h1{
-  margin-top: 1vw;
   font-family: Amerigo_BT;
 }
 
 .description h3{
-  margin-top: 1.8vw;
   font-family: Amerigo_BT;
+
 }
 
 #geo_right {
-  font-family: Gilroy-ExtraBold;
+  font-family: 'Gilroy-ExtraBold';
+  src: font-url("/assets/fonts/Gilroy-ExtraBold.otf");
   font-size: 1.1vw;
   color: #4D4D4E;
   opacity: .8;
@@ -49,13 +50,16 @@
 }
 
 .gilroy_strong {
- font-family: Gilroy-ExtraBold;
- margin-bottom: 0;
+  font-family: 'Gilroy-ExtraBold';
+  src: font-url("/assets/fonts/Gilroy-ExtraBold.otf");
+
+  margin-bottom: 0;
 }
 
 
 .gilroy_light {
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
 }
 
 .interests {
@@ -71,25 +75,26 @@
 
 
 .close_card_button {
-  color: #4D4D4E;
   top: 1vw;
   right: 1vw;
-  background-color: #FFDDCE;
+  background-color: #fffdfc;
   position: absolute;
-  border-radius: .2vw;
+  border-radius: 50%;
+  transition: 0.3s;
+  padding: 0.5vw;
 }
 
 .close_card_button:hover {
   color: #4D4D4E;
-  background-color: #FF9282;
+  background-color: #ffffff;
 }
 
 
 .cloud_background {
   position:relative;
-  width: 3vw;
+  width: 2.5vw;
   bottom: .5vw;
-  right: 2.6vw;
+  right: 2.1vw;
 }
 
 
@@ -98,6 +103,7 @@
   bottom: 0;
   margin-top: -6vh;
   width: 75%;
+  align-items: baseline;
 }
 
 .blockbutton {
