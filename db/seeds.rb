@@ -8,11 +8,9 @@
 
 require "open-uri"
 
-
 Match.destroy_all
 User.destroy_all
 Chatroom.destroy_all
-
 
 puts "Destroy database"
 
