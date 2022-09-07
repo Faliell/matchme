@@ -15,7 +15,8 @@
   padding: 5px 0;
   border-radius: 1.5vw;
   color: #ffffff;
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
   text-align: center;
   margin: 0 12vw;
   font-size: 1vw;
@@ -68,7 +69,8 @@
   color: whitesmoke;
   font-size: .9vw;
   text-shadow: 1px 1px 3px #1e1e1e;
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
 
 }
 
@@ -76,14 +78,16 @@
   color: whitesmoke;
   font-size: .8vw;
   text-shadow: 2px 2px 3px #1e1e1e;
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
 }
 
 .age {
   color: whitesmoke;
   font-size: .8vw;
   text-shadow: 1px 2px 3px #1e1e1e;
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
 }
 
 .Chatlink {
@@ -94,7 +98,8 @@
   background-color: #DD8F97;
   border-radius: .7vw;
   color: #ffffff;
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
   padding: .3vw;
   font-size: 1vw;
   border: none;
@@ -109,7 +114,8 @@
 
 
 .no_match {
-  font-family: Gilroy-Light;
+  font-family: 'Gilroy-Light';
+  src: font-url("/assets/fonts/Gilroy-Light.otf");
   display: flex;
   flex-direction: column;
   justify-content: center;
