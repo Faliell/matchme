@@ -5,18 +5,40 @@
 
 // To style the message itself
 .sender-style, .receiver-style {
+  font-family: 'Gilroy-Light';
   width: 70%;
   max-width: 400px;
-  border-radius: 4px;
   padding: 8px;
   min-height: 80px;
 }
 
+.extrabold{
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 1.1vw;
+
+}
+
 .sender-style {
+  color: white;
+  border-radius: 10px 10px 0px 10px;
   background-color: #D06E6E;
+  box-shadow: 2px 3px 1px #ff88888a;
+  transition: transform 0.4s;
+  cursor: pointer;
+}
+
+.sender-style:hover {
+  transform: scale(1.01);
 }
 
 .receiver-style {
   border-color: lightgray;
   border-style: solid;
+  border-radius: 10px 10px 10px 0px;
+
+}
+
+.timestamp {
+  font-size: 0.9vw;
+  color: rgb(255, 242, 242);
 }
