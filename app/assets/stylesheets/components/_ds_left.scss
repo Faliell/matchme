@@ -141,7 +141,7 @@
   bottom: 11.8vw;
   left: 6.7vw;
   z-index: 2;
-  background-color: white;
+  background-color: transparent;
   color: #DD8F97;
   font-family: Gilroy-Light;
   font-size: 1vw;
@@ -164,6 +164,7 @@
 
 .Chatlinkdash {
   z-index: 2;
+  
   background-color: #dd8f97b8;
   border-radius: .7vw;
   color: #ffffff;
