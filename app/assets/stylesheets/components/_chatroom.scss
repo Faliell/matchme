@@ -16,6 +16,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 0.5vw;
   box-shadow: 0px 1px 2px #888888;
+  position: relative;
 }
 
 .avatar_2 {
@@ -43,6 +44,9 @@
 
 .formmessage {
   font-family: 'Gilroy-Light';
+
+  bottom: 0px;
+  width: 96%;
 }
 
 

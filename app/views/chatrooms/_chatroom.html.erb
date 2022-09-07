@@ -1,12 +1,19 @@
 <div class="namematchchat mt-2 ms-1">
   <h2>Avatar + Matchname</h2>
+  <% if current_user.gender == "male" %>
+  <%= image_tag chatroom.female.photo, class: "avatar" %>
+  <%= chatroom.female.first_name %> <%= chatroom.female.last_name %>
+  <% else %>
+  <%= image_tag chatroom.male.photo, class: "avatar" %>
+  <%= chatroom.male.first_name %> <%= chatroom.male.last_name %>
+  <% end %>
 </div>
-<div class="container chatroom"
+<div class="container chatroom d-flex flex-column"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>"
   data-chatroom-subscription-target="scroll">
-  <div class="messages" data-chatroom-subscription-target="messages">
+  <div class="messages flex-grow-1" data-chatroom-subscription-target="messages">
     <div class="">
       <div class="messages mt-5">
         <% chatroom.messages.each do |message| %>
@@ -20,7 +27,7 @@
     </div>
     </div>
 
-<div class= "formmessage mt-5" >
+<div class= "formmessage mt-3 px-3" >
       <%= simple_form_for [chatroom, message],
         html: {data: {action: "turbo:submit-end->chatroom-subscription#resetForm"}, class: "d-flex"} do |f|
      %>
