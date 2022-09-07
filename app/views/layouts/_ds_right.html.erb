@@ -44,9 +44,11 @@
         <div class="rightds_imainf">
           <div class="img-seeker">
             <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
-            <%= button_to block_male_match_path(m), method: :patch do %>
-            <i class='fa-solid fa-ban'></i>
-              <% end %>
+            <div class="blockbutton">
+            <%= button_to block_male_match_path(m), class:"remove", method: :patch do %>
+          <i class='fa-solid fa-ban fa-2xl'></i>
+        <% end %>
+            </div>
           </div>
 
         </div>
@@ -60,12 +62,6 @@
         </div>
 
         <h1>Chat with <%= m.first_name %></h1>
-        <%# <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %> %>
-
-
-        <%# <h1>Chat with <%= m.first_name</h1> %>
-        <%# <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
-        <%# <%=button_to "Block Match", block_male_match_path(m), method: :patch %>
 
       </div>
     <%end%>
