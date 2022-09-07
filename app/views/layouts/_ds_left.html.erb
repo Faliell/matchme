@@ -6,7 +6,8 @@
         <img src="https://media3.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif?cid=ecf05e4798a60vhfyomj9b1vpnlus4j9ie50ew0bmlzkocyb&rid=giphy.gif&ct=g" width="480" height="317">
       </div>
     <% else %>
-    <p id="matchtitle">Matches</p>
+
+    <button id="matchtitle" style="display: inline;">Matches</button><button id="Chattitle" style="display: inline;">Messages</button>
     <div class="row">
       <% if current_user.gender == "female" %>
         <% true_matches = [] %>
@@ -20,7 +21,7 @@
             <% true_matches.uniq.each do |m| %>
               <div class="col-4">
               <div class="match">
-                <div class="img-seeker" data-id="<%= m.id %>" data-action="click->chat#showChat">
+                <div class="img-seeker" data-id="<%= m.id %>" data-action="click->chat#showCard">
                   <%= cl_image_tag m.photo.key, class: "img-fluid"%>
                 </div>
                 <div class="info_dscard">
@@ -48,7 +49,7 @@
             <% true_matches.uniq.each do |m| %>
               <div class="col-4">
               <div class="match">
-                  <div class="img_seeker" data-id="<%= m.id %>" data-action="click->chat#showChat">
+                  <div class="img_seeker" data-id="<%= m.id %>" data-action="click->chat#showCard">
                     <%= cl_image_tag m.photo.key, class: "img-fluid"%>
                   </div>
                   <div class="info_dscard">
