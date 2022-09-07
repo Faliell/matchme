@@ -78,8 +78,8 @@ interest:"Coffee;Fashion",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "New York")
-file7 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662376833/MatcheMe/250_j9tw3t.jpg")
-rachel.photo.attach(io: file7, filename: "250_j9tw3t.jpg", content_type: "image/jg")
+file7 = URI.open("https://res.cloudinary.com/dwhirvd5m/image/upload/v1662559201/MatcheMe/greene_nbzsv8.jpg")
+rachel.photo.attach(io: file7, filename: "greene_nbzsv8.jpg", content_type: "image/jg")
 rachel.save
 
 kaia = User.create(first_name: "Kaia", last_name: "Gerber", email: "kaia@model.com", password: "123123", age: 21,
