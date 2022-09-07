@@ -143,10 +143,9 @@ phoebe.photo.attach(io: file11, filename: "phoebe_vqkzu1.jpg", content_type: "im
 phoebe.save
 
 fabio = User.create(first_name: "Fabio", last_name: "Schapowal", email: "fabio@me.com", password: "123123", age: 41, description: "", interest:"", gender: "male", account_type: "MatchMaker", geo: "Porto")
-file12 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662560536/development/https://res.cloudinary.com/faliell/image/upload/v1662560536/development/fabio_cqm3nt.jpg")
-fabio.photo.attach(io: file12, filename: "https://res.cloudinary.com/faliell/image/upload/v1662560536/development/fabio_cqm3nt.jpg", content_type: "image/jpg")
+file12 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662560536/development/fabio_cqm3nt.jpg")
+fabio.photo.attach(io: file12, filename: "fabio_cqm3nt.jpg", content_type: "image/jpg")
 fabio.save
-
 brie = User.create(first_name: "Brie", last_name: "Van de Kamp", email: "brie@wine.com", password: "123123", age: 48, description: "", interest:"", gender: "female", account_type: "MatchMaker", geo: "Wisteria Lane")
 file13 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940070/development/image_400x400_w8qadn.jpg")
 brie.photo.attach(io: file13, filename: "image_400x400_w8qadn.jpg", content_type: "image/jg")
