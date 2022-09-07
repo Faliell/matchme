@@ -16,7 +16,7 @@ puts "Destroy database"
 
 amy = User.create(first_name: "Amy", last_name: "Farrah Fowler", email: "amy@bigbang.com", password: "123123", age: 42,
   description: "I'm fond of my friends, especially my BFF. I've become quite socially active as well over the last couple of years ",
-  interest:"Biology",
+  interest:"Biology;Science;Sheldon",
   gender: "female",
   account_type: "MatchSeeker",
   geo: "California")
@@ -74,7 +74,7 @@ katniss.save
 
 rachel = User.create(first_name: "Rachel", last_name: "Greene", email: "rachel@friends.com", password: "123123", age: 33,
 description: "Funny and spirited but pretty self-involved. I'm always here for my friends.",
-interest:"Coffee",
+interest:"Coffee;Fashion",
 gender: "female",
 account_type: "MatchSeeker",
 geo: "New York")
