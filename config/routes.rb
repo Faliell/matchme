@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/select", to: "pages#select"
   get "/dashboard", to: "pages#dashboard"
+  get "/profile", to: "pages#profile"
 
   get "/female", to: "matches#female"
   get "/male", to: "matches#male"
