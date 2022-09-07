@@ -14,7 +14,12 @@
           <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right"  %>
         </div>
       </div>
-      <div class="description container">
+      <div class="description container d-flex">
+        <div class="blockbutton">
+        <%= button_to block_female_match_path(m), class:"remove", method: :patch do %>
+          <i class='fa-solid fa-ban fa-2xl'></i>
+        <% end %>
+        </div>
         <div id="Name_age"><h1><%= m.first_name %> <%= m.last_name %></h1><h3>, <%= m.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
         <p id="geo_right"><i class="fa-solid fa-location-dot geo_right"></i><%= m.geo %></p>
         <p class="gilroy_strong">About me</p>
@@ -23,8 +28,6 @@
         <p class="interests"><%= m.interest%></p>
       </div>
       <h3 style = "font-family: Amerigo_BT">Chat with <%= m.first_name %></h3>
-      <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
-      <%=button_to "Block Match", block_female_match_path(m), method: :patch%>
       <% end %>
     </div>
   <%end%>
