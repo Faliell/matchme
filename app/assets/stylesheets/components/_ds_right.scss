@@ -118,8 +118,9 @@
 
 
 .close_card_button.chat {
-  top: 12vw;
-  right: 8.2vw;
+  position: absolute;
+  top: 25vh;
+  right: 8vw;
   background-color: #fffdfce8;
   position: absolute;
   border-radius: 50%;
