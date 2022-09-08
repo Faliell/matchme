@@ -1,4 +1,8 @@
+
+
 <div style="margin-top: 10vw">
 <%  @notifications.each do |notification| %>
 <%= notification.to_notification.message %>
 <%end %>
+<%= @notifications.read.count %>
+<%= @notifications.unread.count %>
