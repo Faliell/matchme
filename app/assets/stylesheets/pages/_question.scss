@@ -5,30 +5,144 @@
   border-color: #8E3E3E;
   border-radius: 1.8vw;
   color: #2f2f2f;
-  padding: .6vw;
   font-family: 'Gilroy';
   font-size: 0.9vw;
   width: 30vw;
 }
 
-.titleseeker {
-  font-family: 'Amerigo BT';
-  text-align: center;
-  font-size: 50px;
-  padding-top : 50px;
+
+.row-form {
+  display: flex;
+  border: none;
+  -webkit-appearance: none;
+  width: 100%;
+  justify-content: space-between;
 }
 
 
-.signup{
-  right: 1vh;
-  top: 1vh;
-  border-color: #8E3E3E;
-  border-radius: 20px;
-  color: #8E3E3E;
-  border-width: .12vw;
-  padding: 5px 30px 5px 30px;
-  font-family: 'Gilroy';
-  font-weight: light;
-  font-size: 15px;
+.radio_buttons {
+  width: 100%;
+  display: flex;
+}
+
+.form-control {
+  border: none;
+}
+
+
+element.style {
+  border: none;
+}
+
+.form-label {
+  margin-left: .5;
+  margin-top: 0.5vw;
+  font-family: Gilroy-ExtraBold;
+}
+
+.form-label {
+  margin-bottom: 0 !important;
+}
+
+.box{
+  border: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2vw;
+  padding: 0 1vw;
+  margin-top: 0.5vw;
+  width: 100%;
+}
+
+
+.box1{
+  border: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2vw;
+  padding: 0 1vw;
+  margin-bottom: .5vw;
+  width: 48%;
+}
+
+.gender-wrapper {
+  width: 76%;
+}
+
+.box2{
+  border: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2vw;
+  padding: 0 1vw;
+  margin-bottom: .5vw;
+  display: flex;
+  flex-direction: row;
+  width: 18vw;
+  height: 100%;
+}
+
+.box3{
+  border: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2vw;
+  padding: 0 1vw;
+  margin-bottom: .5vw;
+  width: 20%;
+}
+
+
+.gender-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.gender-item {
+  flex: 0 0 30%;
+}
+
+.gender-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.gender-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 3vw;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: var;
+}
+
+.gender-selector:checked + label {
+  color: #a94e4e !important;
+}
+
+#user_gender_male + label {
+  color: #a94e4e;
+}
+
+#user_gender_male:checked + label {
+  border-width: 3px;
+}
+
+
+#user_gender_female + label {
+  color: #a94e4e;
+}
+
+#user_gender_female:checked + label {
+  border-width: 3px;
+}
+
+
+
+.radio_buttons {
+  border: none;
 }

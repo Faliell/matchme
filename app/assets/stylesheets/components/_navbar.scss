@@ -30,8 +30,11 @@
   display: flex;
   font-family: 'Gilroy-Light';
   font-size: 1.8vh;
-  margin-top: 2vh;
   margin-right: 0.6vw;
+}
+
+.name_ava p{
+  margin: auto 0;
 }
 
 .navbar-nav {
@@ -53,10 +56,13 @@
 
 .NotificationBell {
   height: 3vh;
-  margin: auto 1vw;
-
 }
 
 .dropdown-toggle::after {
   content: none;
+}
+
+
+.dropdown.center {
+  margin: auto .6vw auto 0;
 }
