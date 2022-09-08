@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_variables
-    @notifications = current_user.notifications
+
+    @notifications = current_user.notifications.unread
+
   end
 end

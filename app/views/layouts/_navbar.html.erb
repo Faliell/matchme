@@ -10,15 +10,23 @@
         <div class="navbar-nav">
           <div class="dropdown">
             <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="NotificationBell" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662635781/MatchMe/output-onlinepngtools_2_dr7ule.png">
-            </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <% if @notifications %>
-                <%  @notifications.each do |notification| %>
-                  <a class="dropdown-item"><%= notification.to_notification.message %></a>
-                <% end %>
+              <% if @notifications.any? %>
+                <img class="NotificationBell" src="https://res.cloudinary.com/faliell/image/upload/v1662649350/development/NotificationYes_rxj7vh.png">
+              <% else %>
+                <img class="NotificationBell" src="https://res.cloudinary.com/faliell/image/upload/v1662649350/development/NotificationNo_zesjwq.png">
               <% end %>
-            </div>
+
+            </a>
+            <% if @notifications.any? %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%  @notifications.last(10).each do |notification| %>
+                  <div class="d-flex">
+                    <a class="dropdown-item"><%= notification.to_notification.message %></a>
+                  </div>
+                <% end %>
+                <%= link_to "Clear notifications", mark_all_read_notifications_path, class: "dropdown-item" %>
+              </div>
+            <% end %>
           </div>
           <div class="name_ava">
             <p><%= current_user.first_name %> <%= current_user.last_name %></p>
