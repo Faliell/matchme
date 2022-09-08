@@ -28,6 +28,7 @@
 }
 
 .name_ava {
+  display: flex;
   font-family: 'Gilroy-Light';
   font-size: 1.8vh;
   margin-top: 2vh;
@@ -48,4 +49,10 @@
 
 .dropdown-menu.dropdown-menu-end {
   position: absolute;
+}
+
+
+.NotificationBell {
+  height: 5vh;
+  margin: auto 1vw;
 }
