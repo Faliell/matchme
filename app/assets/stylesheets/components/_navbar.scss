@@ -13,7 +13,6 @@
   padding-top: 0px;
   padding-bottom: 0px;
   font-family: 'Gilroy-Light';
-
 }
 
 
@@ -53,6 +52,11 @@
 
 
 .NotificationBell {
-  height: 5vh;
+  height: 3vh;
   margin: auto 1vw;
+
+}
+
+.dropdown-toggle::after {
+  content: none;
 }

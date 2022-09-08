@@ -8,25 +8,24 @@
     <div>
       <div id="navbarSupportedContent">
         <div class="navbar-nav">
-
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="NotificationBell" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662635781/MatchMe/output-onlinepngtools_2_dr7ule.png">
+            </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <% if @notifications %>
+                <%  @notifications.each do |notification| %>
+                  <a class="dropdown-item"><%= notification.to_notification.message %></a>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
           <div class="name_ava">
             <p><%= current_user.first_name %> <%= current_user.last_name %></p>
           </div>
           <div>
             <li class="nav-item">
               <% if !current_user.nil? && current_user.photo.attached? %>
-              <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <input type="image" class="NotificationBell" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662632369/MatchMe/output-onlinepngtools_fun5cx.png">
-                </a>
-                <ul class="dropdown-menu">
-                  <% if @notifications %>
-                    <%  @notifications.each do |notification| %>
-                      <li><a class="dropdown-item" href="#"><%= notification.to_notification.message %></a></li>
-                    <%end %>
-                  <% end %>
-                </ul>
-              </div>
                 <%#= image_tag current_user.photo, class: "avatar dropdown-toggle", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", crop: :fill, gravity: :face, data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% else %>
@@ -34,20 +33,20 @@
 
               <% end %>
               <% if current_user.account_type == "MatchSeeker" %>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Matches", "/dashboard", class: "dropdown-item" %>
-                <%= link_to "Notifications", "/notifications", class: "dropdown-item" %>
-                <%= link_to "My Profile", "/profile", class: "dropdown-item" %>
-                <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-                <% else%>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Matches", "/dashboard", class: "dropdown-item" %>
-                <%= link_to "Start Matching", new_match_path, class: "dropdown-item" %>
-                <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-                <% end %>
-              </div>
-              </div>
+                  <%= link_to "Matches", "/dashboard", class: "dropdown-item" %>
+                  <%= link_to "Notifications", "/notifications", class: "dropdown-item" %>
+                  <%= link_to "My Profile", "/profile", class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+                  <% else%>
+                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Matches", "/dashboard", class: "dropdown-item" %>
+                  <%= link_to "Start Matching", new_match_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+                </div>
+              <% end %>
             </li>
+          </div>
         </div>
       </div>
     </div>
