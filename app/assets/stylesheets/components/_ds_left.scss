@@ -144,12 +144,13 @@
   background-color: transparent;
   color: #DD8F97;
   font-family: Gilroy-Light;
-  font-size: 1vw;
+  font-size: 0.6vw;
   border: none;
   transition: 0.2s;
   text-decoration: none;
   margin-bottom: 15px;
   margin-right: 5px;
+
 }
 
 .remove:hover {
@@ -157,6 +158,9 @@
   left: 6.7vw;
   z-index: 2;
   background-color: transparent;
+  font-family: Gilroy-Light;
+  font-size: 0.6vw;
+  border: none;
   color: #ad2432c9;
   margin-bottom: 15px;
   margin-right: 5px;
@@ -164,7 +168,6 @@
 
 .Chatlinkdash {
   z-index: 2;
-
   background-color: #dd8f97b8;
   border-radius: .7vw;
   color: #ffffff;

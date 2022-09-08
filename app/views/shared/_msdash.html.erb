@@ -1,8 +1,19 @@
 <body class="background_seeker">
   <div class="seekerdash">
     <div class="divide_ds" data-controller="chat">
+    <% if current_user.female_matches.empty? && current_user.male_matches.empty? %>
+      <div class="container no_match mt-5">
+       <div class="No_match">
+          <p class="hello">Hello <strong><%=current_user.first_name%>!</strong></p>
+          <p id="itseems" class="mt-3">Please wait patiently, our matchmakers are doing their best to find  <strong>your perfect match!</strong></p>
+      </div>
+      <div class="seekercenter mt-0">
+        <img src="https://res.cloudinary.com/dwhirvd5m/image/upload/v1662646190/MatcheMe/MSDASH3_myi6ru.png">
+      </div>
+      <% else %>
         <div><%= render 'layouts/ds_left' %></div>
         <div class="background_right"><%= render 'layouts/ds_right' %></div>
+      <% end  %>
     </div>
   </div>
 </body>
