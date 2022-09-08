@@ -19,4 +19,20 @@
 .divide_ds {
   display: flex;
   justify-content: space-between;
+  background: linear-gradient(#FFFFFF 23%, #FFDED3 50%, #FFFFFF 96%) ;
+}
+
+.background_seeker {
+  background-color: linear-gradient(#FFFFFF 23%, #FFDED3 63%, #FFFFFF 96%);
+}
+
+.seekercenter {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seekercenter img{
+  width: 40vw;
 }
