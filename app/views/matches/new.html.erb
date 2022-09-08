@@ -49,7 +49,7 @@
             </div>
             <div class="mb-2">
               <p class="flip_title">Interests: </p>
-              <p data-matches-target="femaleInterest"><%= @female.interest%></p>
+              <p class="interests mt-3" data-matches-target="femaleInterest"><%= @female.interest %></p>
             </div>
           </div>
         </div>
@@ -101,13 +101,7 @@
             </div>
             <div class="mb-2">
               <p class="flip_title">Interests: </p>
-              <p data-matches-target="maleInterest">
-                <%= @male.interest%></p>
-                <div class="d-flex flex-row ">
-                  <% interest_array = @male.interest.split(";") %>
-
-                </div>
-              </p>
+              <p class="interests mt-3" data-matches-target="maleInterest"><%= @male.interest %></p>
             </div>
           </div>
         </div>
@@ -117,7 +111,5 @@
       </div>
 
     </div>
-
-
 
 </body>
