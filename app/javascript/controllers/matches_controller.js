@@ -64,7 +64,6 @@ export default class extends Controller {
       this.femalePhotoValue = data.photo;
       this.femalePhotoTarget.getElementsByTagName("img")[0].src = `http://res.cloudinary.com/faliell/image/upload/c_fill,g_face,h_400,w_337/v1/${this.environmentValue}/${data.photo}`;
       this.femaleidTarget.value = data.female.id
-
     })
   };
 
