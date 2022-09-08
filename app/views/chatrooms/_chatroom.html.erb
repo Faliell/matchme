@@ -18,7 +18,7 @@
   <%= chatroom.male.first_name %> <%= chatroom.male.last_name %>
   </div >
   <div class="mt-4 d-flex align-items-center">
-  <%= button_to block_male_match_path(chatroom.female), class:"remove", method: :patch do %>
+  <%= button_to block_male_match_path(chatroom.male), class:"remove", method: :patch do %>
     Remove this Match <i class='fa-solid fa-ban fa-2xl'></i>
   <% end %>
   </div>
