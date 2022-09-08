@@ -127,7 +127,7 @@ file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/d
 forrest.photo.attach(io: file10, filename: "main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg", content_type: "image/jg")
 forrest.save
 
-luca = User.create(first_name: "Luca", last_name: "Fauzia", email: "luca@love.com", password: "123123", age: 33, description: "I'm a good musican and love people", interest:"pianos.and design", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
+luca = User.create(first_name: "Luca", last_name: "Fauzia", email: "luca@love.com", password: "123123", age: 33, description: "I'm a good musican and love people", interest:"pianos and design", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
 file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662132178/development/107921513_z3yk4e.jpg")
 luca.photo.attach(io: file10, filename: "107921513_z3yk4e.jpg", content_type: "image/jpg")
 luca.save

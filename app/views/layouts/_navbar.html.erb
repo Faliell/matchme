@@ -8,6 +8,7 @@
     <div>
       <div id="navbarSupportedContent">
         <div class="navbar-nav">
+          <input type="image" class="NotificationBell" src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662632369/MatchMe/output-onlinepngtools_fun5cx.png">
           <div class="name_ava">
             <p><%= current_user.first_name %> <%= current_user.last_name %></p>
           </div>
@@ -42,7 +43,6 @@
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Matches", "/dashboard", class: "dropdown-item" %>
                 <%= link_to "Start Matching", new_match_path, class: "dropdown-item" %>
-                <%= link_to "Notifications", "/notifications", class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
                 <% end %>
               </div>
