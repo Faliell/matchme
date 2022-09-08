@@ -13,7 +13,7 @@
           <div class="img-seeker">
             <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
             <div class="blockbutton">
-            <%= button_to block_female_match_path(m), class:"remove", method: :patch do %>
+            Remove this Match <%= button_to block_female_match_path(m), class:"remove", method: :patch do %>
           <i class='fa-solid fa-ban fa-2xl'></i>
         <% end %>
             </div>
@@ -58,17 +58,17 @@
     <% true_matches.uniq.each do |m| %>
       <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
         <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideDescription"></div>
-        <div class="rightds_imainf">
-          <div class="img-seeker">
-            <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
-            <div class="blockbutton">
-            <%= button_to block_male_match_path(m), class:"remove", method: :patch do %>
-          <i class='fa-solid fa-ban fa-2xl'></i>
-        <% end %>
+          <div class="rightds_imainf">
+            <div class="img-seeker">
+              <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
+                <div class="blockbutton remove">
+                  Remove this Match <%= button_to block_male_match_path(m), class:"remove", method: :patch do %>
+                    <i class='fa-solid fa-ban fa-2xl'></i>
+                  <% end %>
+                </div>
             </div>
           </div>
 
-        </div>
         <div class="description container">
           <div id="Name_age"><h1><%= m.first_name %> <%= m.last_name %></h1><h3>, <%= m.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
           <p id="geo_right"><i class="fa-solid fa-location-dot"></i> <%= m.geo %></p>
