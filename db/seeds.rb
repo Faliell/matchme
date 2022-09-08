@@ -185,4 +185,4 @@ puts "Create Users"
 # match5 = Match.create(status: false, male: forrest, female: robin, match_maker: brie )
 # match6 = Match.create(status: "match", male: kratos, female: cersei, match_maker: fiona )
 
-puts "Create Matches"
+puts "Create Matches" 
