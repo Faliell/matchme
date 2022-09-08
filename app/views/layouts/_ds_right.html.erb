@@ -27,7 +27,7 @@
           <p class="gilroy_light mt-3"><%= m.description %></p>
           <p class="gilroy_strong">Interests</p>
           <div class="d-flex flex-row ">
-            <% interest_array = m.interest.split(";") %>
+            <% interest_array = m.interest.split("  ") %>
             <% interest_array.each do |i| %>
               <div><p class="interests mt-3">
               <%= i %>
@@ -76,7 +76,7 @@
           <p class="gilroy_light mt-3"><%= m.description %></p>
           <p class="gilroy_strong">Interests</p>
           <div class="d-flex flex-row ">
-            <% interest_array = m.interest.split(";") %>
+            <% interest_array = m.interest.split("  ") %>
             <% interest_array.each do |i| %>
               <div><p class="interests mt-3">
               <%= i %>

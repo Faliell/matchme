@@ -102,14 +102,10 @@
             <div class="mb-2">
               <p class="flip_title">Interests: </p>
               <p data-matches-target="maleInterest">
-                <% @male.interest%></p>
+                <%= @male.interest%></p>
                 <div class="d-flex flex-row ">
                   <% interest_array = @male.interest.split(";") %>
-                  <% interest_array.each do |i| %>
-                    <div><p class="interests mt-3">
-                    <%= i %>
-                  </div>
-                  <% end %>
+
                 </div>
               </p>
             </div>
