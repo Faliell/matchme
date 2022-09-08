@@ -55,14 +55,28 @@
 
 
 .NotificationBell {
-  height: 3vh;
+  height: 2.3vh;
+  margin: auto 1vw;
 }
 
 .dropdown-toggle::after {
   content: none;
 }
 
+.notification {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
 
-.dropdown.center {
-  margin: auto .6vw auto 0;
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: #E46161;
+  color: white;
+  margin-right: 0.6vw;
+
 }
