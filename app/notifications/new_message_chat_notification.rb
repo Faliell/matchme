@@ -18,7 +18,8 @@ class NewMessageChatNotification < Noticed::Base
 
   # Define helper methods to make rendering easier.
   def message
-    "You received a new message"
+    user = User.find(params[:post].user_id).first_name
+    "You received a new message from #{user}"
   end
 
   def url
