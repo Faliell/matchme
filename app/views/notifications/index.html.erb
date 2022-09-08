@@ -1,12 +1,10 @@
+
+
 <div style="margin-top: 10vw">
 
+<%  @notifications.each do |notification| %>
+<%= notification.to_notification.message %>
+<%end %>
+<%= @notifications.read.count %>
+<%= @notifications.unread.count %>
 
-<div class="recent_matches mt-4">
-  <%  @notifications.each_with_index do |notification, i| %>
-    <% break if i == 10; %>
-    <div class="match_display mt-3">
-      <%= notification.to_notification.message %>
-      <%= raise%>
-    </div>
-  <% end %>
-</div>
