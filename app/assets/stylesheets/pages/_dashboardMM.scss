@@ -135,3 +135,23 @@
 .spacing {
   width: 33%;
 }
+.No_match {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.No_match img{
+  width: 40vw;
+  height: 28.5vw;
+}
+
+
+.No_match p{
+  color: #8F4B4B;
+  font-family: Gilroy-Light;
+  margin: 0 auto;
+  font-size: 3vh;
+
+}
