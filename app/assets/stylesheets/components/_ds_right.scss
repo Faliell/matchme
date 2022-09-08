@@ -91,7 +91,7 @@
   position:relative;
   width: 2.5vw;
   bottom: .5vw;
-  right: 2.1vw;
+  right: 2.3vw;
 }
 
 
@@ -107,4 +107,28 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 2vh;
+}
+
+
+.render_chat {
+  width: 45vw;
+  margin: auto;
+}
+
+
+.close_card_button.chat {
+  top: 12vw;
+  right: 8.2vw;
+  background-color: #fffdfce8;
+  position: absolute;
+  border-radius: 50%;
+  transition: 0.3s;
+  padding: 0.5vw;
+  z-index: 2;
+}
+
+.close_card_button.chat:hover {
+  color: #4d4d4ec9;
+  background-color: #fffafa;
+  opacity: 0.8;
 }

@@ -20,7 +20,14 @@ class NewMatchNotification < Noticed::Base
 
   # Define helper methods to make rendering easier.
   def message
-    "New Match has been created"
+
+    if recipient.id == params[:post].male_id
+      female = User.find(params[:post].female_id).first_name
+      "You have a new match with #{female}"
+    else
+      male = User.find(params[:post].male_id).first_name
+      "You have a new match with #{male}"
+    end
   end
 
   def url

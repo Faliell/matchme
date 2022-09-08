@@ -1,0 +1,30 @@
+<h1>My profile</h1>
+<div class="align-items-center">
+
+  <div class="mt-4 d-flex align-items-center">
+    <%= button_to edit_user_registration_path, class:"remove" do %>
+      Edit your profile <i class="fas fa-edit"></i>
+    <% end %>
+    <%= button_to edit_user_registration_path, class:"remove" do %>
+      Remove your Account <i class="fa-solid fa-trash"></i>
+    <% end %>
+  </div>
+
+  <div class="description container">
+    <%= image_tag current_user.photo %>
+      <div id="Name_age"><h1><%= current_user.first_name %> <%= current_user.last_name %></h1><h3>, <%= current_user.age %> <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
+        <p id="geo_right"><i class="fa-solid fa-location-dot"></i> <%= current_user.geo %></p>
+        <p class="gilroy_strong">About me</p>
+        <p class="gilroy_light mt-3"><%= current_user.description %></p>
+        <p class="gilroy_strong">Interests</p>
+          <div class="d-flex flex-row ">
+            <% interest_array = current_user.interest.split(";") %>
+            <% interest_array.each do |i| %>
+              <div>
+                <p class="interests mt-3"><%= i %></p>
+              </div>
+            <% end %>
+          </div>
+      </div>
+  </div>
+</div>
