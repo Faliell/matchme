@@ -60,7 +60,7 @@
             <% elsif current_user.points >= 25 %>
             <h3 id="mystats" class="pt-2">Champion Cupid</h1>
             <% end %>
-            <div class="container level p-0 pt-4">
+            <div class="container level p-0">
               <% if current_user.points %>
                 <% if current_user.points >= 100 then @level_bar = 100 %>
                 <% else @level_bar = current_user.points %>
