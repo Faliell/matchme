@@ -1,10 +1,61 @@
-
-
 <div style="margin-top: 10vw">
 
-<%  @notifications.each do |notification| %>
-<%= notification.to_notification.message %>
-<%end %>
-<%= @notifications.read.count %>
-<%= @notifications.unread.count %>
-
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Notifications
+  </a>
+  <ul class="dropdown-menu">
+      <li>
+        <% if current_user.gender == "male" %>
+          <div class="d-flex flex-column">
+            <% @notifications.each do |notification| %>
+              <div>
+                <% if notification.type == "NewMatchNotification" %>
+                  <a class="dropdown-item">
+                  <%= link_to dashboard_path do %>
+                      <i class="fa-solid fa-heart", style="color: #DD8F97"></i>
+                      <%= notification.to_notification.message %>
+                      <%= cl_image_tag User.find(notification.params[:post].female_id).photo.key, class: "avatar_2"  %>
+                    </a>
+                  <% end %>
+                <% elsif notification.type == "NewMessageChatNotification" %>
+                  <a class="dropdown-item">
+                  <%= link_to chatroom_path(notification.params[:post].chatroom_id) do %>
+                      <i class="fa-solid fa-message", style="color: #DD8F97"></i>
+                      <%= notification.to_notification.message %>
+                      <%= notification.params[:post].user_id %>
+                      <%= cl_image_tag User.find(notification.params[:post].user_id).photo.key, class: "avatar_2"  %>
+                    </a>
+                  <% end %>
+                <% end %>
+              </div>
+            <%end %>
+        <% else %>
+          <div class="d-flex flex-column">
+            <% @notifications.each do |notification| %>
+              <div>
+                <% if notification.type == "NewMatchNotification" %>
+                  <a class="dropdown-item">
+                  <%= link_to dashboard_path do %>
+                      <i class="fa-solid fa-heart", style="color: #DD8F97"></i>
+                      <%= notification.to_notification.message %>
+                      <%= cl_image_tag User.find(notification.params[:post].male_id).photo.key, class: "avatar_2"  %>
+                    </a>
+                  <% end %>
+                <% elsif notification.type == "NewMessageChatNotification" %>
+                  <a class="dropdown-item">
+                  <%= link_to chatroom_path(notification.params[:post].chatroom_id) do %>
+                      <i class="fa-solid fa-message", style="color: #DD8F97"></i>
+                      <%= notification.to_notification.message %>
+                      <%= notification.params[:post].user_id %>
+                      <%= cl_image_tag User.find(notification.params[:post].user_id).photo.key, class: "avatar_2"  %>
+                    </a>
+                  <% end %>
+                <% end %>
+              </div>
+            <%end %>
+        <% end %>
+      </div>
+    </li>
+  </ul>
+</div>
