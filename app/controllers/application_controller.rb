@@ -12,8 +12,10 @@ class ApplicationController < ActionController::Base
   end
 
   def set_variables
-
-    @notifications = current_user.notifications.unread
-
+    if user_signed_in?
+      @notifications = current_user.notifications.unread
+    else
+      @notifications = []
+    end
   end
 end
