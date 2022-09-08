@@ -8,7 +8,7 @@
     <%end%>
     <% true_matches.uniq.each do |m| %>
       <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
-        <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideChat"></div>
+        <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideDescription"></div>
         <div class="rightds_imainf">
           <div class="img-seeker">
             <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
@@ -37,11 +37,17 @@
           </div>
         </div>
         <div class="d-flex justify-content-center pb-4">
-        <%=link_to "Chat with #{m.first_name}" , chatroom_path(Chatroom.where(male: m, female:current_user ).first.id), class:"Chatlinkdash p-3" %>
+        <%# <%=link_to "Chat with #{m.first_name}" , chatroom_path(Chatroom.where(male: m, female:current_user ).first.id), class:"Chatlinkdash p-3" %>
+        <input type="button" class="Chatlinkdash p-3" data-id="<%= m.id %>" value="Chat with <%= m.first_name %> " data-action="click->chat#showChat">
         </div>
+      </div>
+      <div class="render_chat d-none" data-id="<%= m.id %>" data-chat-target="chat">
+        <div type="button" class="btn-close close_card_button chat" aria-label="Close" data-action="click->chat#hideChat"></div>
+        <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(male: m, female: current_user).first, message: Message.new %>
       </div>
     <%end%>
   <%end%>
+
   <% if current_user.gender == "male" %>
     <% true_matches = [] %>
     <% current_user.male_matches.where(block: false).each do |match| %>
@@ -51,7 +57,7 @@
     <%end%>
     <% true_matches.uniq.each do |m| %>
       <div class="rlds d-none" data-id="<%= m.id %>" data-chat-target="match">
-        <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideChat"></div>
+        <div type="button" class="btn-close close_card_button" aria-label="Close" data-action="click->chat#hideDescription"></div>
         <div class="rightds_imainf">
           <div class="img-seeker">
             <%= cl_image_tag m.photo.key, crop: :thumb, gravity: :face, class: "img-right" %>
@@ -80,8 +86,13 @@
           </div>
         </div>
         <div class="d-flex justify-content-center pb-4">
-        <%=link_to "Chat with #{m.first_name}" , chatroom_path(Chatroom.where(male: current_user, female:m ).first.id), class:"Chatlinkdash p-3" %>
+        <%# <%=link_to "Chat with #{m.first_name}" , chatroom_path(Chatroom.where(male: current_user, female:m ).first.id), class:"Chatlinkdash p-3" %>
+        <input type="button" class="Chatlinkdash p-3" data-id="<%= m.id %>" value="Chat with <%= m.first_name %> " data-action="click->chat#showChat">
         </div>
+      </div>
+      <div class="render_chat d-none" data-id="<%= m.id %>" data-chat-target="chat">
+        <div type="button" class="btn-close close_card_button chat" aria-label="Close" data-action="click->chat#hideChat"></div>
+        <%= render 'chatrooms/chatroom', chatroom: Chatroom.where(female: m, male: current_user).first, message: Message.new %>
       </div>
     <%end%>
   <%end%>

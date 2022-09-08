@@ -6,7 +6,7 @@
         <img src="https://media3.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif?cid=ecf05e4798a60vhfyomj9b1vpnlus4j9ie50ew0bmlzkocyb&rid=giphy.gif&ct=g" width="480" height="317">
       </div>
     <% else %>
-    <p id="matchtitle">Matches</p>
+     <p id="matchtitle">Matches</p>
     <div class="row">
       <% if current_user.gender == "female" %>
         <% true_matches = [] %>
@@ -20,7 +20,7 @@
             <% true_matches.uniq.each do |m| %>
               <div class="col-4">
               <div class="match">
-                <div class="img-seeker" data-id="<%= m.id %>" data-action="click->chat#showChat">
+                <div class="img-seeker" data-id="<%= m.id %>" data-action="click->chat#showDescription">
                   <%= cl_image_tag m.photo.key, class: "img-fluid"%>
                 </div>
                 <div class="info_dscard">
@@ -28,7 +28,7 @@
                   <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
                   <p class="age"><%= m.age %></p>
                 </div>
-                <%=link_to "Chat", chatroom_path(Chatroom.where(male: m, female: current_user).first.id), class:"Chatlink" %>
+                <input type="button" class="Chatlink" data-id="<%= m.id %>" value="chat" data-action="click->chat#showChat">
               </div>
               </div>
             <% end %>
@@ -48,7 +48,7 @@
             <% true_matches.uniq.each do |m| %>
               <div class="col-4">
               <div class="match">
-                  <div class="img_seeker" data-id="<%= m.id %>" data-action="click->chat#showChat">
+                  <div class="img_seeker" data-id="<%= m.id %>" data-action="click->chat#showDescription">
                     <%= cl_image_tag m.photo.key, class: "img-fluid"%>
                   </div>
                   <div class="info_dscard">
@@ -56,7 +56,7 @@
                     <p class="location"><i class="fa-solid fa-location-dot"></i>  <%= m.geo %></p>
                     <p class="age"><%= m.age %></p>
                   </div>
-                  <%=link_to "Chat", chatroom_path(Chatroom.where(female: m, male: current_user).first.id), class:"Chatlink" %>
+                  <input type="button" class="Chatlink" data-id="<%= m.id %>" value="Chat" data-action="click->chat#showChat">
               </div>
               </div>
             <% end %>
