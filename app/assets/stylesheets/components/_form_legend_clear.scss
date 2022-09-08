@@ -8,3 +8,7 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.form-label, .form-check-label, .col-form-label, #user_photo {
+  font-family: 'Gilroy-Light' !important;
+}
