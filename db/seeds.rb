@@ -147,7 +147,7 @@ rajesh.photo.attach(io: file8, filename: "7cde0837350ccbfebb1e0b8e517e85c2_cfy29
 rajesh.save
 
 tiffany = User.create(first_name: "Tiffany", last_name: "Wilson", email: "tiffany@white.com", password: "123123", age: 33,
-  description: "Gina knows best.",
+  description: "Hello, it's me!",
   interest:"Shoes  Clothers",
   gender: "female",
   account_type: "MatchSeeker",
