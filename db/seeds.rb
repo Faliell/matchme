@@ -153,13 +153,13 @@ tiffany = User.create(first_name: "Tiffany", last_name: "Wilson", email: "tiffan
   account_type: "MatchSeeker",
   geo: "California")
   file18 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662724165/development/AsBranquelas2_400x400_iigtoe.jpg")
-  gina.photo.attach(io: file18, filename: "AsBranquelas2_400x400_iigtoe.jpg", content_type: "image/jpg")
-  gina.save
+  tiffany.photo.attach(io: file18, filename: "AsBranquelas2_400x400_iigtoe.jpg", content_type: "image/jpg")
+  tiffany.save
 
 francisco = User.create(first_name: "Francisco", last_name: "Mendonça", email: "francisco@lewagon.com", password: "123123", age: 35, description: "I am eco and only go to work by bike.", interest:"Surf  LeWagon  Code", gender: "male", account_type: "MatchSeeker", geo: "Porto")
-file19 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1661940071/development/main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg")
-forrest.photo.attach(io: file19, filename: "main-qimg-712d8aeb2e8ee4d33873f743edded00c-lq_aeseed.jpg", content_type: "image/jpg")
-forrest.save
+file19 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662726046/development/Captura_de_ecr%C3%A3_2022-09-09_%C3%A0s_13.20.22_cuqqa5.png")
+francisco.photo.attach(io: file19, filename: "Captura_de_ecr%C3%A3_2022-09-09_%C3%A0s_13.20.22_cuqqa5.png", content_type: "image/jpg")
+francisco.save
 
 luca = User.create(first_name: "Luca", last_name: "Fauzia", email: "luca@love.com", password: "123123", age: 33, description: "I'm a good musican and love people", interest:"Pianos Design", gender: "male", account_type: "MatchSeeker", geo: "Alabama")
 file10 = URI.open("https://res.cloudinary.com/faliell/image/upload/v1662132178/development/107921513_z3yk4e.jpg")
