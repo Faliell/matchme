@@ -80,3 +80,42 @@
   margin-right: 0.6vw;
 
 }
+
+
+.notification_width {
+  min-width: 23vw;
+  justify-content: space-between;
+}
+
+.notification_width:hover {
+  background-color: #E5A6AD;
+  border-radius: 0.5vw;
+}
+
+.notification_width a{
+  font-family: Gilroy-light;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+
+
+.notification_width p{
+  width: fit-content;
+  margin: .5vh 0 .5vh .5vw;
+}
+
+.notification_width p:hover{
+  color: black;
+}
+
+.center_logo {
+  margin: auto .5vw auto 0;
+}
+
+
+.clear_notification {
+  text-align: center;
+}
