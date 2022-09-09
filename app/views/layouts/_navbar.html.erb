@@ -22,27 +22,27 @@
                   <% if current_user.gender == "male" %>
                     <div class="d-flex flex-column">
                       <% @notifications.each do |notification| %>
-                      <div class="notification_width">
-                        <% if notification.type == "NewMatchNotification" %>
-                          <%= link_to dashboard_path do %>
-                              <p><%= cl_image_tag User.find(notification.params[:post].female_id).photo.key, class: "avatar_2"  %>
-                              <%= notification.to_notification.message %></p>
-                              <i class="fa-solid fa-heart center_logo", style="color: #DD8F97"></i>
+                        <div class="notification_width">
+                          <% if notification.type == "NewMatchNotification" %>
+                            <%= link_to dashboard_path do %>
+                                <p><%= cl_image_tag User.find(notification.params[:post].female_id).photo.key, class: "avatar_2"  %>
+                                <%= notification.to_notification.message %></p>
+                                <i class="fa-solid fa-heart center_logo", style="color: #DD8F97"></i>
+                            <% end %>
+                          <% elsif notification.type == "NewMessageChatNotification" %>
+                            <%= link_to chatroom_path(notification.params[:post].chatroom_id) do %>
+                                <p><%= cl_image_tag User.find(notification.params[:post].user_id).photo.key, class: "avatar_2"  %>
+                                <%= notification.to_notification.message %></p>
+                                <i class="fa-solid fa-message center_logo", style="color: #DD8F97"></i>
+                            <% end %>
                           <% end %>
-                        <% elsif notification.type == "NewMessageChatNotification" %>
-                          <%= link_to chatroom_path(notification.params[:post].chatroom_id) do %>
-                              <p><%= cl_image_tag User.find(notification.params[:post].user_id).photo.key, class: "avatar_2"  %>
-                              <%= notification.to_notification.message %>
-                              <%= notification.params[:post].user_id %></p>
-                              <i class="fa-solid fa-message center_logo", style="color: #DD8F97"></i>
-                          <% end %>
-                        <% end %>
-                      </div>
+                        </div>
                       <%end %>
+                    </div>
                   <% else %>
                     <div class="d-flex flex-column">
                       <% @notifications.each do |notification| %>
-                        <div>
+                        <div class="notification_width">
                           <% if notification.type == "NewMatchNotification" %>
                             <%= link_to dashboard_path do %>
                                 <p><%= cl_image_tag User.find(notification.params[:post].male_id).photo.key, class: "avatar_2"  %>
@@ -52,16 +52,15 @@
                           <% elsif notification.type == "NewMessageChatNotification" %>
                             <%= link_to chatroom_path(notification.params[:post].chatroom_id) do %>
                                 <p><%= cl_image_tag User.find(notification.params[:post].user_id).photo.key, class: "avatar_2"  %>
-                                <%= notification.to_notification.message %>
-                                <%= notification.params[:post].user_id %></p>
-                                <i class="fa-solid fa-message", style="color: #DD8F97"></i>
+                                <%= notification.to_notification.message %></p>
+                                <i class="fa-solid fa-message center_logo", style="color: #DD8F97"></i>
                             <% end %>
                           <% end %>
                         </div>
                       <%end %>
+                    </div>
                   <% end %>
-                </div>
-              </li>
+                </li>
                <%= link_to "Clear notifications", mark_all_read_notifications_path, class: "dropdown-item clear_notification" %>
               </div>
             <% end %>

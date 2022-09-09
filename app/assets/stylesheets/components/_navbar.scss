@@ -83,13 +83,14 @@
 
 
 .notification_width {
-  min-width: 23vw;
+  min-width: 25vw;
   justify-content: space-between;
 }
 
 .notification_width:hover {
   background-color: #E5A6AD;
   border-radius: 0.5vw;
+  color: black;
 }
 
 .notification_width a{
@@ -100,6 +101,9 @@
   text-decoration: none;
 }
 
+.notification_width a:hover{
+  color: black;
+}
 
 
 .notification_width p{
