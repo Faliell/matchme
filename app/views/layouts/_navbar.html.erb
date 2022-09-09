@@ -8,14 +8,13 @@
     <div>
       <div id="navbarSupportedContent">
         <div class="navbar-nav">
-          <div class="dropdown">
+          <div class="dropdown center">
             <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <% if @notifications.any? %>
                 <img class="NotificationBell" src="https://res.cloudinary.com/faliell/image/upload/v1662649350/development/NotificationYes_rxj7vh.png">
               <% else %>
                 <img class="NotificationBell" src="https://res.cloudinary.com/faliell/image/upload/v1662649350/development/NotificationNo_zesjwq.png">
               <% end %>
-
             </a>
             <% if @notifications.any? %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

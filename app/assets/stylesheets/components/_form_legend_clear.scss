@@ -8,3 +8,19 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.form-label, .form-check-label, .col-form-label, #user_photo, ::placeholder {
+  font-family: 'Gilroy-Light' !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  font-family: 'Gilroy-Light' !important;
+}

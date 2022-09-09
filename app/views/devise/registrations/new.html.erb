@@ -2,75 +2,106 @@
 
 <div class="question mt-5">
 
+
+  <div class="TitleForm">
+    <% if params[:query] == "MatchMaker" %>
+      <p>Sign up to be a MatchMaker</p>
+    <% else %>
+      <p>Sign up to be matched</p>
+    <% end %>
+  </div>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
     <%= f.error_notification %>
 
-    <div class="form-inputs mt-5">
-      <div class="firstrow">
-        <div class="firstname">
-          <%= f.input :first_name,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "" }%>
-        </div>
+  <div class="form-inputs">
+    <div class="row-form">
+      <div class="box1">
+        <%= f.input :first_name,
+            required: true,
+            autofocus: true,
+            input_html: { autocomplete: "" }%>
+      </div>
+      <div class="box1">
         <%= f.input :last_name,
+              required: true,
+              autofocus: true,
+              input_html: { autocomplete: "" }%>
+      </div>
+    </div>
+    <div class="row-form">
+      <fieldset class="mb-3 radio_buttons required user_gender">
+        <legend class="col-form-label pt-0">gender<abbr title="required">*</abbr></legend>
+        <div class="gender-wrapper">
+          <div class="box2">
+            <input type="hidden" name="user[gender]" value="" autocomplete="off">
+            <div class="gender-item">
+              <input class="form-check-input radio_buttons required gender-selector" autofocus="autofocus" required="required" aria-required="true" type="radio" value="Male" name="user[gender]" id="user_gender_male">
+              <label class="form-check-label collection_radio_buttons" for="user_gender_male"><i class="fa-solid fa-mars"></i></label>
+            </div>
+            <div class="gender-item">
+              <input class="form-check-input radio_buttons required gender-selector" autofocus="autofocus" required="required" aria-required="true" type="radio" value="Female" name="user[gender]" id="user_gender_female">
+              <label class="form-check-label collection_radio_buttons" for="user_gender_female"><i class="fa-solid fa-venus"></i></label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="box3">
+        <%= f.input :age,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "" }%>
-        </div>
-      <div class="secondrow">
-      <%= f.input :age,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "" }%>
-      <%= f.input :gender, as: :radio_buttons, selected: 1 , collection: ["Male", "Female"],
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "" }%>
       </div>
-      <div class="mb-3">
+    </div>
+    <div class="row-form box">
       <%= f.input :description,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "" }%>
-      </div>
-      <div class="fourthrowinterest">
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "" }%>
+    </div>
+    <div class="row-form box">
       <%= f.input :interest,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "" }%>
-      </div>
-
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "" }%>
+    </div>
+    <div class="row-form box">
       <%= f.input :geo,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "" }%>
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "" }%>
+    </div>
       <%= f.input :type, selected: params["query"] , collection: ["MatchMaker", "MatchSeeker"],
-                  required: true,
-                  autofocus: true,
-                  label: false,
-                  input_html: { autocomplete: "" ,  class: "d-none"}%>
-
-
+                required: true,
+                autofocus: true,
+                label: false,
+                input_html: { autocomplete: "" ,  class: "d-none"}%>
+    <div class="row-form box">
       <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    </div>
+    <div class="row-form box">
       <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    </div>
+    <div class="row-form box">
       <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+    </div>
+    <div class="row-form box">
       <%= f.input :photo, as: :file %>
     </div>
+  </div>
 
-     <div class="form-actions d-flex justify-content-center mt-3">
-          <%= f.button :submit, "Sign Up", class: "btn_log_in mt-3" %>
-    </div>
+    <div class="form-actions d-flex justify-content-center mt-3">
+        <%= f.button :submit, "Sign Up", class: "btn_log_in mt-3" %>
+  </div>
 
   <% end %>
 </div>
 
-<%= render 'vectors/vector_signupSeek' %>
+<%# <%= render 'vectors/vector_signupSeek' %>

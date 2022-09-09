@@ -1,0 +1,63 @@
+
+.My_profile {
+  background-color: #FFF8F8;
+}
+
+.container.Info {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 2vw;
+  margin: 12vh auto 0 auto;
+  width: 40vw;
+  padding: .5vw 5vw;
+}
+
+.container.Info h2 {
+  font-family: Amerigo_BT;
+  margin-left: 2vw;
+}
+
+.buttons_delete {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons_delete p{
+  font-family: Amerigo_BT;
+  font-size: 1.2vw;
+}
+
+.image_profile_description {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.image_profile_description img{
+  max-height: 35vh;
+  border-radius: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.information_description {
+  margin: auto;
+}
+
+
+.Name_age_description {
+  display: flex;
+  bottom: 0;
+  width: 75%;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+
+.button_to p{
+  margin: 0;
+}
