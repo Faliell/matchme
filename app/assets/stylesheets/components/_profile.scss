@@ -15,6 +15,7 @@
 
 .container.Info h2 {
   font-family: Amerigo_BT;
+  margin-left: 2vw;
 }
 
 .buttons_delete {
@@ -22,8 +23,9 @@
   justify-content: space-around;
 }
 
-.buttons_delete h4{
+.buttons_delete p{
   font-family: Amerigo_BT;
+  font-size: 1.2vw;
 }
 
 .image_profile_description {
@@ -53,4 +55,9 @@
   width: 75%;
   align-items: baseline;
   flex-direction: row;
+}
+
+
+.button_to p{
+  margin: 0;
 }

@@ -14,7 +14,7 @@
         <%= image_tag current_user.photo %>
       </div>
       <div class="description container">
-        <div id="Name_age_description" style="display: flex; align-items: baseline;"><h1>Luca Fauzia</h1><h3>, 33 <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
+        <div id="Name_age_description" style="display: flex; align-items: baseline;"><h1> <%=current_user.first_name%> <%=current_user.last_name %></h1><h3>, 33 <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
           <p id="geo_right"><i class="fa-solid fa-location-dot"></i> <%= current_user.geo %></p>
           <p class="gilroy_strong">About me</p>
           <p class="gilroy_light mt-3"><%= current_user.description %></p>
