@@ -30,6 +30,11 @@
 }
 
 
+.form-control:focus, input:focus{
+  outline: none;
+}
+
+
 element.style {
   border: none;
 }
