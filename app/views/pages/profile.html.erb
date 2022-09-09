@@ -11,7 +11,7 @@
     </div>
     <div class="description_profile">
       <div class="image_profile_description">
-        <%= image_tag current_user.photo %>
+        <%= cl_image_tag current_user.photo.key %>
       </div>
       <div class="description container">
         <div id="Name_age_description" style="display: flex; align-items: baseline;"><h1> <%=current_user.first_name%> <%=current_user.last_name %></h1><h3>, 33 <img src="https://res.cloudinary.com/dlr6yrpai/image/upload/v1662454789/MatchMe/cloudage_cc07c3.png" alt="cloud_background" class="cloud_background"></h3></div>
