@@ -2,11 +2,11 @@
   <div class="container Info">
     <h2>My profile</h2>
     <div class="buttons_delete">
-      <%= button_to edit_user_registration_path, class:"remove" do %>
+      <%= link_to edit_user_registration_path, class:"remove" do %>
         <p>Edit your profile <i class="fas fa-edit"></i></p>
       <% end %>
-      <%= button_to edit_user_registration_path, class:"remove" do %>
-        <p>Remove your Account <i class="fa-solid fa-trash"></i></p>
+      <%= link_to edit_user_registration_path, class:"remove" do %>
+        <p>Delete your Account <i class="fa-solid fa-trash"></i></p>
       <% end %>
     </div>
     <div class="description_profile">
