@@ -1,13 +1,16 @@
+.background_registration1 {
+  background-color: white;
+}
+
 .question {
-  position: absolute;
-  left: 5vmax;
-  top: 3vmax;
   border-color: #8E3E3E;
   border-radius: 1.8vw;
   color: #2f2f2f;
   font-family: 'Gilroy';
   font-size: 0.9vw;
-  width: 30vw;
+  margin: 12vh 0 5vh 5vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -27,6 +30,7 @@
 
 .form-control {
   border: none;
+  width: 100%;
 }
 
 
@@ -71,7 +75,14 @@ element.style {
 }
 
 .gender-wrapper {
-  width: 76%;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+}
+
+.gender_text {
+  width: 5vw;
+  margin: auto;
 }
 
 .box2{
@@ -80,11 +91,27 @@ element.style {
   border-width: 1px;
   border-radius: 2vw;
   padding: 0 1vw;
-  margin-bottom: .5vw;
+  margin: 0 .5vw .5vw 0;
   display: flex;
-  flex-direction: row;
-  width: 18vw;
-  height: 100%;
+  width: 100%;
+  height: 13vh;
+}
+
+.box4 {
+  border: solid;
+  color: black;
+  border-width: 1px;
+  border-radius: 2vw;
+  padding: 0 1vw;
+  margin-bottom: .5vw;
+}
+
+.required.user_gender {
+  margin: 0;
+}
+
+.row-form.gender {
+  margin: 0;
 }
 
 .box3{
@@ -93,19 +120,13 @@ element.style {
   border-width: 1px;
   border-radius: 2vw;
   padding: 0 1vw;
-  margin-bottom: .5vw;
-  width: 20%;
-}
-
-
-.gender-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+  width: 35%;
+  height: 13vh;
 }
 
 .gender-item {
-  flex: 0 0 30%;
+  flex: 0 2 30%;
+  margin: auto 1vw;
 }
 
 .gender-selector {
@@ -118,9 +139,9 @@ element.style {
   cursor: pointer;
   box-sizing: border-box;
   width: 100%;
-  font-size: 3vw;
+  font-size: 5vh;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 4px;
   background-color: var;
 }
@@ -135,6 +156,7 @@ element.style {
 
 #user_gender_male:checked + label {
   border-width: 3px;
+  border-color: #DD8F97;
 }
 
 
@@ -144,10 +166,96 @@ element.style {
 
 #user_gender_female:checked + label {
   border-width: 3px;
+  border-color: #DD8F97;
 }
 
 
 
-.radio_buttons {
-  border: none;
+.whiteback input[type="text"], .whiteback input[type="password"], .whiteback input[type="number"], .whiteback input[type="password"], .whiteback input[type="email"], .whiteback input[type="file"], textarea {
+  background-color : white;
+
+}
+
+
+#background_registration {
+  width: 45vw;
+  position: absolute;
+  top: 6vw;
+  left: 45vw;
+  z-index: -1;
+}
+
+
+.whiteback input[type="file"] {
+  $form-file-button-color:  #ffffff;
+  $form-file-button-bg: #DD8F97;
+}
+
+
+.TitleForm {
+  font-family: Amerigo_BT;
+  font-size: 3.2vw;
+  text-align: center;
+  width: 25vw;
+}
+
+
+.TitleResign {
+  font-family: Amerigo_BT;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+#resign p {
+  font-size: 1.3vw;
+}
+
+.box_passwords {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.form-label.string.optional {
+  width: 30vw;
+}
+
+
+.btn_back {
+  position: absolute;
+  top: 10vh;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  color: #DD8F97;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 17px;
+  width: 5vw;
+  height: 5vh;
+  margin-left: 1vw;
+  z-index: 0;
+}
+
+
+.btn_back:hover {
+  background-color: #ffffff;
+  color: #DD8F97;
+  border: none
+}
+
+.btn_delete_account {
+  align-items: center;
+  background-color: #DD8F97;
+  border-radius: 7px;
+  color: #ffffff;
+  font-family: 'Gilroy-ExtraBold';
+  font-size: 17px;
+  height: 5vh;
+}
+
+.btn_delete_account {
+  background-color: #DD8F97;
+  color: #ffffff;
+  border: none
 }
